@@ -3,332 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Zinc | Premium Secondary Ingots</title>
+    <title>Varman Metals | Foundry Optimized Zinc</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Pure Metallic Gold Palette */
-            --gold-deep: #8a6d3b;
-            --gold-mid: #c5a059;
-            --gold-light: #fcf6ba;
-            --gold-shimmer: #e1b966;
-            
-            /* High-Reflectivity Gold Gradient for Background */
-            --gold-bg-gradient: linear-gradient(135deg, 
-                #a67c00 0%, 
-                #bf9b30 25%, 
-                #ffdc73 50%, 
-                #bf9b30 75%, 
-                #a67c00 100%
-            );
-            
-            /* Polished Silver Gradient for Text/Accents */
-            --silver-text-gradient: linear-gradient(135deg, #ffffff 0%, #e2e8f0 40%, #94a3b8 100%);
+            --foundry-gold: #c5a059;
+            --soot-black: #0d0d0d;
+            --molten-glow: #ff4e00;
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: var(--gold-bg-gradient);
-            background-attachment: fixed;
-            color: #1a1a1a;
-            overflow-x: hidden;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--soot-black);
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             min-height: 100vh;
+            /* Molten Background from Reference */
+            background-image: 
+                linear-gradient(to bottom, rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95)),
+                url('3.jfif');
+            background-attachment: fixed;
+            background-size: cover;
         }
 
-        .serif { font-family: 'Playfair Display', serif; }
+        .mono { font-family: 'IBM Plex Mono', monospace; }
 
-        /* Metallic Silver Effect */
-        .text-silver {
-            background: var(--silver-text-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        /* MAIN SLANT CONTAINER */
+        .showcase-container {
+            width: 95%;
+            max-width: 1200px;
+            background: #fff;
+            color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Nav Glassmorphism */
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        /* THE SLANT HEADER SECTION */
+        .slant-header {
+            position: relative;
+            height: 450px;
+            display: flex;
+            background: #000;
         }
 
-        /* Card Design - Subtle Translucency */
-        .card-ingot {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(15px);
-            border: 1.5px solid rgba(255, 255, 255, 0.4);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        /* Left Side: Slanted Crucible Image */
+        .slant-image {
+            flex: 1.2;
+            position: relative;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+            z-index: 2;
         }
 
-        .card-ingot:hover {
-            transform: translateY(-10px) scale(1.02);
-            background: rgba(255, 255, 255, 0.2);
-            border-color: white;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+        .slant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(1.1) contrast(1.1);
         }
 
-        /* Silver Action Buttons */
-        .btn-silver-action {
-            background: var(--silver-text-gradient);
-            color: #2d3748;
+        /* Right Side: Dark Info Overlay */
+        .slant-content {
+            flex: 1;
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 40px;
+            margin-left: -100px; /* Overlap effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        /* CONTENT GRID BELOW */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 60px 50px;
+            background: white;
+        }
+
+        .info-column h3 {
+            font-size: 24px;
             font-weight: 800;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
+            font-style: italic;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #eee;
+            padding-bottom: 10px;
         }
 
-        .btn-silver-action:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4);
-            filter: brightness(1.05);
+        .info-column p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
         }
 
-        /* Table Background for Legibility */
-        .glass-table {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 2rem;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        .analysis-table {
+            width: 100%;
+            font-size: 14px;
+            margin-top: 10px;
         }
 
-        .section-padding { padding: 120px 5%; }
-
-        /* Metallic Reflection Animation */
-        @keyframes shine {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
+        .analysis-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
         }
 
-        .metallic-shine {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            background-size: 200% 100%;
-            animation: shine 4s infinite linear;
+        .gold-tag {
+            background: var(--foundry-gold);
+            color: black;
+            padding: 4px 12px;
+            font-weight: 800;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .btn-action {
+            background: var(--foundry-gold);
+            color: black;
+            padding: 12px 24px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            width: fit-content;
+        }
+
+        @media (max-width: 900px) {
+            .slant-header { flex-direction: column; height: auto; }
+            .slant-image { clip-path: none; height: 300px; }
+            .slant-content { margin-left: 0; padding: 40px; }
+            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-nav rounded-full px-10 py-4">
-            <div class="text-2xl font-extrabold tracking-tighter flex items-center">
-                <span class="text-white drop-shadow-lg">ZINC</span>
-                <span class="ml-2 text-white/70 italic serif font-light">Supply Co.</span>
+    <div class="showcase-container">
+        <!-- TOP SLANT SECTION -->
+        <div class="slant-header">
+            <div class="slant-image">
+                <img src="3.jfif" alt="Foundry Crucible Pouring">
             </div>
-            <div class="hidden md:flex space-x-10 text-[11px] font-black uppercase tracking-[0.3em] text-white">
-                <a href="#types" class="hover:text-silver-solid transition-all">Grades</a>
-                <a href="#stock" class="hover:text-silver-solid transition-all">Stock</a>
-                <a href="#analysis" class="hover:text-silver-solid transition-all">Purity</a>
-                <a href="#order" class="hover:text-silver-solid transition-all">Contract</a>
-            </div>
-            <a href="#order" class="btn-silver-action px-8 py-2.5 rounded-full text-[10px] uppercase tracking-widest">
-                Get Quote
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="z-10">
-                <div class="inline-block px-4 py-1 mb-6 border border-white/30 rounded-full">
-                    <span class="text-white/80 text-[10px] font-bold uppercase tracking-widest">Secondary Zinc Refining</span>
-                </div>
-                <h1 class="text-7xl md:text-9xl font-black serif leading-[0.9] mb-8 text-white drop-shadow-2xl">
-                    Pure <br>
-                    <span class="text-silver italic">Metal.</span>
-                </h1>
-                <p class="text-white text-xl mb-12 max-w-lg leading-relaxed font-light">
-                    The ultimate silver metal presented on a golden standard of reliability. High-purity remelted ingots for the precision Bhatti industry.
+            <div class="slant-content">
+                <div class="gold-tag">Industrial Grade</div>
+                <h1 class="text-5xl font-black italic leading-tight mb-4">Foundry-Optimized <br>Zinc Ingots</h1>
+                <p class="text-white/60 mb-6 text-sm leading-relaxed">
+                    Engineered for non-ferrous casting. Our secondary remelted zinc ensures high recovery rates and zero-defect finishes for brass bhattis.
                 </p>
-                <div class="flex flex-wrap gap-6">
-                    <a href="#types" class="btn-silver-action px-12 py-5 rounded-full uppercase text-xs tracking-[0.2em]">
-                        View Inventory
-                    </a>
-                    <a href="#analysis" class="group flex items-center gap-4 text-white font-bold uppercase text-xs tracking-widest">
-                        <span class="w-12 h-12 rounded-full border border-white/40 flex items-center justify-center group-hover:bg-white/10 transition-all">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
-                        </span>
-                        Quality Report
-                    </a>
-                </div>
-            </div>
-            
-            <div class="relative">
-                <div class="w-full aspect-square bg-white/5 rounded-[5rem] border border-white/20 flex items-center justify-center relative overflow-hidden group">
-                    <div class="absolute inset-0 metallic-shine opacity-10"></div>
-                    <div class="w-4/5 h-4/5 bg-gradient-to-br from-white via-slate-200 to-slate-500 rounded-3xl shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] flex items-center justify-center p-1">
-                        <div class="w-full h-full bg-slate-100 rounded-[1.2rem] flex flex-col items-center justify-center border-t-2 border-white">
-                            <span class="text-slate-300 font-black text-8xl mb-2 italic">Zn</span>
-                            <span class="text-slate-400 font-bold tracking-[1em] text-xs uppercase">Zinc Ingot</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -top-10 -right-10 bg-white p-8 rounded-3xl shadow-2xl border-b-8 border-slate-300">
-                    <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Lot Certification</p>
-                    <p class="text-4xl font-black text-slate-800">99.9%</p>
-                </div>
+                <a href="https://wa.me/919898989898" class="btn-action">
+                    GET LIVE QUOTE <span>→</span>
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Section: Types -->
-    <section id="types" class="section-padding relative overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                <div class="max-w-2xl">
-                    <h2 class="text-white/60 font-black uppercase tracking-[0.4em] text-xs mb-4">Market Classification</h2>
-                    <h3 class="text-5xl md:text-7xl font-bold serif text-white italic drop-shadow-lg">Ingot Grading.</h3>
+        <!-- MAIN INFORMATION GRID -->
+        <div class="info-grid">
+            
+            <!-- Column 1: Overview -->
+            <div class="info-column">
+                <h3>Foundry Showcase</h3>
+                <p>
+                    We provide high-purity zinc blocks that act as the backbone for quality brass production. Whether you are manufacturing <b>domestic utensils</b> or <b>mechanical spare parts</b>, our alloy profile is balanced to minimize slag and maximize your bottom line.
+                </p>
+                <div class="mt-6 flex items-center gap-4">
+                    <img src="4.jfif" class="w-12 h-12 rounded-full border border-gray-200" alt="Varman Logo">
+                    <span class="mono text-[10px] uppercase font-bold tracking-widest text-gray-400">Varman Metals <br>Est. Excellence</span>
                 </div>
-                <p class="text-white/80 max-w-sm text-sm italic font-light border-l border-white/30 pl-6 mb-2">
-                    Custom processed to meet the specific heat-retention needs of traditional Bhatti melting.
+            </div>
+
+            <!-- Column 2: Chemical Analysis -->
+            <div class="info-column">
+                <h3>Chemical Analysis</h3>
+                <table class="analysis-table">
+                    <tr>
+                        <td class="font-bold">Zinc (Zn)</td>
+                        <td class="text-right mono font-bold text-green-600">99.10%</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">Lead (Pb)</td>
+                        <td class="text-right mono">0.035% Max</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">Iron (Fe)</td>
+                        <td class="text-right mono">0.005% Max</td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">Tin/Al</td>
+                        <td class="text-right mono text-gray-400 italic">Traces</td>
+                    </tr>
+                </table>
+                <p class="text-[11px] mt-4 italic text-gray-400 uppercase tracking-tighter">
+                    *Spectrometer verified batch VM-2026.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="card-ingot p-12 rounded-[4rem] relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-12">
-                        <h4 class="text-5xl font-black serif text-white">Mota Tod</h4>
-                        <span class="bg-white/20 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Type-1</span>
-                    </div>
-                    <p class="text-white/60 font-bold uppercase text-[11px] tracking-[0.3em] mb-8">Heavy Remelted Fragments</p>
-                    <ul class="space-y-6 text-white text-lg">
-                        <li class="flex items-center gap-5"><span class="w-2 h-2 bg-white rounded-full"></span> 99.5% Purity Guarantee</li>
-                        <li class="flex items-center gap-5"><span class="w-2 h-2 bg-white rounded-full"></span> Optimized for Heavy Brass</li>
-                        <li class="flex items-center gap-5"><span class="w-2 h-2 bg-white rounded-full"></span> Low surface oxidation loss</li>
-                    </ul>
-                    <div class="mt-12 h-[1px] bg-white/20 w-full"></div>
-                    <div class="mt-8 flex justify-between items-center">
-                        <span class="text-white/40 text-xs font-bold uppercase italic">In Stock</span>
-                        <a href="#order" class="text-white font-black text-sm underline underline-offset-8">Inquire Now</a>
-                    </div>
+            <!-- Column 3: Contact & Logistics -->
+            <div class="info-column">
+                <h3>Trade Desk</h3>
+                <p class="mb-4">Direct dispatch available from plant for bulk orders. Competitive LME-linked pricing.</p>
+                <div class="bg-gray-50 p-4 border-l-4 border-[#c5a059]">
+                    <p class="text-xs font-bold text-gray-400 uppercase mb-1">WhatsApp Trading</p>
+                    <p class="text-xl font-black">+91-9898989898</p>
                 </div>
-
-                <div class="card-ingot p-12 rounded-[4rem] relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-12">
-                        <h4 class="text-5xl font-black serif text-white">Bareek Tod</h4>
-                        <span class="bg-white/20 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Type-2</span>
-                    </div>
-                    <p class="text-white/60 font-bold uppercase text-[11px] tracking-[0.3em] mb-8">Fine Remelted Fragments</p>
-                    <ul class="space-y-6 text-white text-lg">
-                        <li class="flex items-center gap-5"><span class="w-2 h-2 bg-white rounded-full"></span> 98.9% Average Purity</li>
-                        <li class="flex items-center gap-5"><span class="w-2 h-2 bg-white rounded-full"></span> Fast-melting for quick cycles</li>
-                    </ul>
-                    <div class="mt-12 h-[1px] bg-white/20 w-full"></div>
-                    <div class="mt-8 flex justify-between items-center">
-                        <span class="text-white/40 text-xs font-bold uppercase italic">Limited Batch</span>
-                        <a href="#order" class="text-white font-black text-sm underline underline-offset-8">Inquire Now</a>
-                    </div>
+                <div class="mt-4 bg-gray-50 p-4 border-l-4 border-black">
+                    <p class="text-xs font-bold text-gray-400 uppercase mb-1">Email Inquiry</p>
+                    <p class="text-lg font-bold">info@varmanmetals.in</p>
                 </div>
             </div>
+
         </div>
-    </section>
 
-    <!-- Section: Stock -->
-    <section id="stock" class="section-padding bg-black/10 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h3 class="text-6xl font-black serif text-white mb-6 italic">Live Inventory</h3>
-                <p class="text-white/50 uppercase tracking-[0.5em] text-[10px] font-black">Stock Documentation</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="space-y-4 text-center">
-                    <div class="w-full aspect-[4/3] rounded-[3rem] bg-white/10 border border-white/20 flex items-center justify-center italic text-white/40 font-black">
-                        BATCH-A1
-                    </div>
-                    <p class="text-white font-bold text-xs uppercase tracking-widest">Mota Tod</p>
-                </div>
-                <div class="space-y-4 text-center">
-                    <div class="w-full aspect-[4/3] rounded-[3rem] bg-white/10 border border-white/20 flex items-center justify-center italic text-white/40 font-black">
-                        BATCH-A2
-                    </div>
-                    <p class="text-white font-bold text-xs uppercase tracking-widest">Secondary Ingots</p>
-                </div>
-                <div class="space-y-4 text-center">
-                    <div class="w-full aspect-[4/3] rounded-[3rem] bg-white/10 border border-white/20 flex items-center justify-center italic text-white/40 font-black">
-                        BATCH-B1
-                    </div>
-                    <p class="text-white font-bold text-xs uppercase tracking-widest">Bareek Tod</p>
-                </div>
-            </div>
+        <!-- Footer Bar -->
+        <div class="bg-gray-100 py-4 px-12 border-t flex justify-between items-center text-[10px] mono uppercase text-gray-400 tracking-[0.3em]">
+            <span>Varman Metals & Foundries</span>
+            <span>Batch Ref: VM-JAN-26</span>
         </div>
-    </section>
+    </div>
 
-    <!-- Section: Analysis -->
-    <section id="analysis" class="section-padding">
-        <div class="max-w-5xl mx-auto glass-table p-12 md:p-20">
-            <div class="mb-16">
-                <h3 class="text-4xl font-black serif text-slate-800 mb-2 italic">Analysis Report</h3>
-                <p class="text-slate-400 font-bold uppercase tracking-widest text-xs">Standard Batch QC #772</p>
-            </div>
-            
-            <div class="space-y-6">
-                <div class="flex justify-between items-center py-6 border-b border-slate-100">
-                    <span class="text-slate-800 font-black text-lg">Zinc Content (Zn)</span>
-                    <span class="text-2xl font-black text-slate-900">99.12%</span>
-                </div>
-                <div class="flex justify-between items-center py-6 border-b border-slate-100">
-                    <span class="text-slate-500 font-bold">Lead (Pb)</span>
-                    <span class="font-bold text-slate-800">0.021% Max</span>
-                </div>
-                <div class="flex justify-between items-center py-6 border-b border-slate-100">
-                    <span class="text-slate-500 font-bold">Iron (Fe)</span>
-                    <span class="font-bold text-slate-800">0.005% Max</span>
-                </div>
-            </div>
-            
-            <div class="mt-16 pt-10 border-t-2 border-slate-100 flex justify-center">
-                <button class="bg-slate-900 text-white px-10 py-4 rounded-full text-xs font-black uppercase tracking-widest">
-                    Download Full Certificate
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Order -->
-    <section id="order" class="section-padding">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-6xl md:text-8xl font-black serif text-white italic mb-4">Order Now</h2>
-                <p class="text-white/60 font-black uppercase tracking-[0.4em] text-[10px]">Secure Your Supply Chain</p>
-            </div>
-
-            <div class="card-ingot p-12 md:p-16 rounded-[4rem]">
-                <form class="space-y-10">
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <input type="text" class="w-full bg-white/10 border border-white/20 rounded-full px-8 py-5 text-white focus:outline-none placeholder:text-white/50" placeholder="Contact Name">
-                        <input type="tel" class="w-full bg-white/10 border border-white/20 rounded-full px-8 py-5 text-white focus:outline-none placeholder:text-white/50" placeholder="WhatsApp Number">
-                    </div>
-                    <button class="w-full btn-silver-action py-7 rounded-full uppercase tracking-[0.3em] text-sm font-black">
-                        Lock In Current Rate
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 text-center relative">
-        <div class="text-4xl font-black tracking-tighter text-white mb-6">
-            <span class="text-silver">ZINC</span> TRADING
-        </div>
-        <p class="text-white/30 text-[10px] tracking-[1em] uppercase">Metallic Purity • Golden Trust</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
