@@ -3,260 +3,770 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varman Metals | Foundry Optimized Zinc</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>Varman Metals | Premium Zinc Ingots</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --foundry-gold: #c5a059;
-            --soot-black: #0d0d0d;
-            --molten-glow: #ff4e00;
-        }
-
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: var(--soot-black);
-            color: #ffffff;
+        /* Reset & Base */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+        
+        /* Luxury Color Palette */
+        :root {
+            --gold: #D4AF37;
+            --gold-dark: #B8860B;
+            --gold-light: #FFD700;
+            --maroon: #800000;
+            --maroon-dark: #5a0000;
+            --maroon-light: #a00000;
+            --silver: #C0C0C0;
+            --silver-dark: #A0A0A0;
+            --emerald: #009B77;
+            --emerald-dark: #007A5E;
+            --jet-black: #0a0a0a;
+            --charcoal: #1a1a1a;
+            --light-gray: #f0f0f0;
+        }
+        
+        /* Hero Section - Luxury Theme */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(128, 0, 0, 0.15) 0%, transparent 50%),
+                linear-gradient(180deg, var(--jet-black) 0%, var(--charcoal) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            background-image: 
-                linear-gradient(to bottom, rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95)),
-                url('https://sigmamelleable.com/wp-content/uploads/2024/10/molten-metal-big-ladle-container-metallurgical-foundry-plant-heavy-industry-scaled.jpg');
-            background-attachment: fixed;
-            background-size: cover;
-            padding: 20px;
+            overflow: hidden;
         }
-
-        .mono { font-family: 'IBM Plex Mono', monospace; }
-
-        /* FULL PAGE SLANT CONTAINER */
-        .showcase-container {
+        
+        .hero::before {
+            content: '';
+            position: absolute;
             width: 100%;
-            max-width: 1400px;
-            background: #fff;
-            color: #1a1a1a;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
-            display: flex;
-            min-height: 85vh;
-            flex-direction: row-reverse; /* Flip the layout: Image right, Content left */
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
         }
-
-        /* RIGHT SIDE: FULL HEIGHT SLANT IMAGE */
-        .slant-image-sidebar {
-            flex: 0 0 45%;
-            position: relative;
-            overflow: hidden;
-            /* Slant angled from the left side now */
-            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        
+        .hero-content {
+            text-align: center;
             z-index: 2;
-            background: #000;
+            padding: 2rem;
+            max-width: 1200px;
         }
-
-        .slant-image-sidebar img {
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--jet-black);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--silver) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--silver);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+        
+        /* Luxury Buttons */
+        .luxury-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0.5rem;
+            letter-spacing: 0.5px;
+            box-shadow: 
+                0 10px 20px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .luxury-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+            z-index: -1;
+            transition: opacity 0.4s;
+        }
+        
+        .luxury-btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--jet-black);
+        }
+        
+        .luxury-btn-gold:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 
+                0 15px 30px rgba(212, 175, 55, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .luxury-btn-maroon {
+            background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+            color: white;
+        }
+        
+        .luxury-btn-maroon:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 
+                0 15px 30px rgba(128, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .luxury-btn-emerald {
+            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+            color: white;
+        }
+        
+        .luxury-btn-emerald:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 
+                0 15px 30px rgba(0, 155, 119, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-icon {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--maroon));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background: linear-gradient(180deg, var(--charcoal) 0%, #242424 100%);
+            padding: 6rem 2rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #2a2a2a, #1f1f1f);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                0 0 0 3px rgba(212, 175, 55, 0.3);
+            border-color: var(--gold);
+            z-index: 10;
+        }
+        
+        .gallery-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 70% center; 
-            filter: brightness(1.1) contrast(1.1);
+            transition: transform 0.7s;
         }
-
-        /* LEFT SIDE: CONTENT AREA */
-        .content-area {
-            flex: 1;
-            margin-right: -10%; /* Overlap the slant on the right */
-            padding: 60px 120px 60px 80px;
-            display: flex;
-            flex-direction: column;
-            z-index: 1;
-            background: white;
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
         }
-
-        .hero-text-block {
-            background: #1a1a1a;
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
             color: white;
-            padding: 60px;
-            margin-bottom: 40px;
-            margin-right: -150px; /* Stronger overlap for the header into the image */
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Report Section */
+        .report-section {
+            background: linear-gradient(180deg, #242424 0%, var(--charcoal) 100%);
+        }
+        
+        .report-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
             position: relative;
-            z-index: 3;
-            box-shadow: -20px 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
         }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px;
-            margin-top: 20px;
-        }
-
-        .info-column h3 {
-            font-size: 24px;
-            font-weight: 800;
-            font-style: italic;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #eee;
-            padding-bottom: 10px;
-            color: #000;
-        }
-
-        .info-column p {
-            color: #555;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        .analysis-table {
+        
+        .report-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            font-size: 15px;
-            margin-top: 10px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--maroon), var(--emerald));
         }
-
-        .analysis-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
+        
+        .composition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-
-        .gold-tag {
-            background: var(--foundry-gold);
-            color: black;
-            padding: 4px 12px;
-            font-weight: 800;
-            font-size: 12px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 15px;
+        
+        .composition-table thead {
+            background: linear-gradient(90deg, var(--maroon), #5a0000);
         }
-
-        .btn-action {
-            background: var(--foundry-gold);
-            color: black;
-            padding: 14px 32px;
+        
+        .composition-table th {
+            padding: 1.5rem;
+            text-align: left;
             font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
+            font-size: 1.1rem;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+        
+        .composition-table tbody tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: background 0.3s;
+        }
+        
+        .composition-table tbody tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .composition-table td {
+            padding: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .composition-table td:first-child {
+            font-weight: 600;
+            color: var(--silver);
+        }
+        
+        .composition-table td:nth-child(2) {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        .verification {
+            text-align: center;
+            font-style: italic;
+            color: var(--silver-dark);
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        
+        .contact-card {
+            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            border-radius: 20px;
+            padding: 4rem;
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--emerald), var(--gold));
+        }
+        
+        .contact-info {
+            margin: 2.5rem 0;
+        }
+        
+        .contact-item {
+            margin: 1.5rem 0;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 20px;
-            width: fit-content;
-            transition: transform 0.2s ease;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.2rem;
         }
-
-        .btn-action:hover {
-            transform: translateY(-2px);
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--jet-black);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
-
-        .contact-box {
-            background: #f9f9f9;
-            padding: 25px;
-            border-left: 5px solid var(--foundry-gold);
-            margin-top: 20px;
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #0a0a0a;
+            color: var(--silver-dark);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
-
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--silver) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive */
         @media (max-width: 1024px) {
-            .showcase-container { flex-direction: column-reverse; }
-            .slant-image-sidebar { flex: none; height: 350px; clip-path: none; }
-            .content-area { margin-right: 0; padding: 40px; }
-            .hero-text-block { margin-right: 0; padding: 40px; }
-            .info-grid { grid-template-columns: 1fr; }
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-card, .report-card {
+                padding: 2rem;
+            }
+            
+            .luxury-btn {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .composition-table th, .composition-table td {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
-
-    <div class="showcase-container">
-        <!-- RIGHT SIDE: SLANT IMAGE -->
-        <div class="slant-image-sidebar">
-            <img src="https://sigmamelleable.com/wp-content/uploads/2024/10/molten-metal-big-ladle-container-metallurgical-foundry-plant-heavy-industry-scaled.jpg" alt="Industrial Molten Metal Foundry">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge floating">BATCH REF: VIP-JAN-26 | LIFE LINKED PRICING</div>
+            <h1 class="hero-title">PREMIUM ZINC INGOTS</h1>
+            <p class="hero-subtitle">Engineered for excellence in non-ferrous casting. High recovery rates with zero-defect finishes for heavy industrial applications.</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="luxury-btn luxury-btn-gold">
+                    <i class="fas fa-gem btn-icon"></i> VIEW PRODUCT GALLERY
+                </a>
+                <a href="#contact" class="luxury-btn luxury-btn-maroon">
+                    <i class="fas fa-phone-alt btn-icon"></i> GET LIVE QUOTE
+                </a>
+            </div>
         </div>
-
-        <!-- LEFT SIDE: ALL CONTENT -->
-        <div class="content-area">
-            <!-- Header/Hero Overlay -->
-            <div class="hero-text-block">
-                <div class="gold-tag">Industrial Grade</div>
-                <h1 class="text-6xl font-black italic leading-tight mb-4 tracking-tighter">Foundry-Optimized <br>Zinc Ingots</h1>
-                <p class="text-white/60 mb-6 text-base leading-relaxed max-w-xl">
-                    Premium secondary remelted zinc blocks engineered for non-ferrous casting. Our process ensures high recovery rates and zero-defect finishes for heavy industrial bhattis.
-                </p>
-                <div class="flex items-center gap-4">
-                    <a href="https://wa.me/919898989898" class="btn-action">
-                        GET LIVE QUOTE <span>→</span>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">PRODUCT GALLERY</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: var(--silver);">Our premium zinc ingots, manufactured to the highest standards for foundry applications</p>
+            
+            <div class="gallery">
+                <!-- 8 Image Boxes -->
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a3a3a, #2a2a2a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>High-Grade Zinc Ingots</h3>
+                        <p>99.10% Pure Zinc</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a3a2a, #3a2a1a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Factory Production</h3>
+                        <p>State-of-the-art manufacturing</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #2a3a4a, #1a2a3a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Quality Inspection</h3>
+                        <p>Spectrometer verified</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a4a3a, #2a3a2a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Ingot Storage</h3>
+                        <p>Properly stored inventory</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a2a3a, #3a1a2a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Packaging</h3>
+                        <p>Secure packaging for shipping</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #2a4a4a, #1a3a3a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Shipment Ready</h3>
+                        <p>On-time delivery guaranteed</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a4a2a, #3a3a1a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Laboratory Testing</h3>
+                        <p>Chemical composition analysis</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a2a4a, #2a1a3a);"></div>
+                    <div class="gallery-overlay">
+                        <h3>Customer Applications</h3>
+                        <p>Used in brass utensils & parts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Report Section -->
+    <section id="report" class="report-section">
+        <div class="container">
+            <h2 class="section-title">CHEMICAL COMPOSITION</h2>
+            
+            <div class="report-card">
+                <p style="text-align: center; margin-bottom: 1.5rem; color: var(--silver); font-size: 1.1rem;">Our zinc ingots meet stringent quality standards with the following certified composition</p>
+                
+                <table class="composition-table">
+                    <thead>
+                        <tr>
+                            <th>Element</th>
+                            <th>Composition</th>
+                            <th>Standard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Zinc (Zn)</td>
+                            <td>99.10%</td>
+                            <td>Primary Component</td>
+                        </tr>
+                        <tr>
+                            <td>Lead (Pb)</td>
+                            <td>0.835% Max</td>
+                            <td>Within Industry Limits</td>
+                        </tr>
+                        <tr>
+                            <td>Iron (Fe)</td>
+                            <td>0.065% Max</td>
+                            <td>Within Industry Limits</td>
+                        </tr>
+                        <tr>
+                            <td>Tin (Sn)</td>
+                            <td>Traces</td>
+                            <td>Negligible</td>
+                        </tr>
+                        <tr>
+                            <td>Aluminum (Al)</td>
+                            <td>Traces</td>
+                            <td>Negligible</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="verification">
+                    <i class="fas fa-certificate" style="color: var(--gold); margin-right: 10px;"></i>
+                    SPECTROMETER VERIFIED AT VARIMAN LAB FACILITY
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="#" class="luxury-btn luxury-btn-emerald" id="downloadReport">
+                        <i class="fas fa-download btn-icon"></i> DOWNLOAD FULL LAB REPORT (PDF)
                     </a>
-                    <div class="mono text-[10px] uppercase font-bold tracking-widest text-white/40">
-                        Batch Ref: VM-JAN-26 <br>LME Linked Pricing
-                    </div>
                 </div>
-            </div>
-
-            <!-- Detail Grid -->
-            <div class="info-grid">
-                <!-- Column 1: Chemical & Specs -->
-                <div class="info-column">
-                    <h3>Chemical Analysis</h3>
-                    <table class="analysis-table">
-                        <tr>
-                            <td class="font-bold">Zinc (Zn)</td>
-                            <td class="text-right mono font-bold text-green-600">99.10%</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Lead (Pb)</td>
-                            <td class="text-right mono">0.035% Max</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Iron (Fe)</td>
-                            <td class="text-right mono">0.005% Max</td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Tin/Al</td>
-                            <td class="text-right mono text-gray-400 italic">Traces</td>
-                        </tr>
-                    </table>
-                    <p class="text-[12px] mt-4 italic text-gray-400 uppercase">
-                        *Spectrometer verified at Varman Lab Facility.
-                    </p>
-
-                    <div class="mt-10 p-6 bg-gray-50 border border-gray-100 flex items-center gap-4">
-                        <img src="4.jfif" class="w-14 h-14 rounded-full border-2 border-white shadow-sm" alt="Varman Logo">
-                        <div>
-                            <p class="text-xs font-black uppercase tracking-widest text-gray-400">Varman Metals</p>
-                            <p class="text-sm font-bold">Industrial Metallurgy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Column 2: Application & Contact -->
-                <div class="info-column">
-                    <h3>Applications</h3>
-                    <p class="mb-6">
-                        Specifically balanced for <b>Brass Utensils</b> and <b>Mechanical Spare Parts</b>. Our zinc acts as a reliable backbone, minimizing slag and improving fluidity in the melt.
-                    </p>
-                    
-                    <div class="contact-box">
-                        <h4 class="text-xs font-black uppercase text-gray-400 mb-3 tracking-widest">Trade Inquiry</h4>
-                        <div class="mb-4">
-                            <p class="text-[10px] mono uppercase text-foundry-gold">Direct WhatsApp</p>
-                            <p class="text-2xl font-black">+91-9898989898</p>
-                        </div>
-                        <div>
-                            <p class="text-[10px] mono uppercase text-foundry-gold">Email Desk</p>
-                            <p class="text-lg font-bold">info@varmanmetals.in</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Info -->
-            <div class="mt-auto pt-10 border-t flex justify-between items-center text-[10px] mono uppercase text-gray-400 tracking-[0.3em]">
-                <span>Logistics: Global Dispatch Available</span>
-                <span>© 2026 Varman Metals & Foundries</span>
             </div>
         </div>
-    </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">CONTACT US</h2>
+            
+            <div class="contact-card">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--silver);">Get in touch for quotations, technical specifications, or any inquiries</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong style="color: var(--gold);">Email:</strong>
+                            <a href="mailto:info@varmanmetals.in" style="color: white; text-decoration: none; font-size: 1.3rem; margin-left: 10px;">
+                                info@varmanmetals.in
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <strong style="color: var(--gold);">WhatsApp:</strong>
+                            <span style="color: white; font-size: 1.3rem; margin-left: 10px;">
+                                +91-9898989898
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <a href="https://wa.me/919898989898" class="luxury-btn luxury-btn-gold" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-whatsapp btn-icon"></i> MESSAGE ON WHATSAPP
+                    </a>
+                    <a href="mailto:info@varmanmetals.in" class="luxury-btn luxury-btn-maroon">
+                        <i class="fas fa-paper-plane btn-icon"></i> SEND EMAIL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">VARMAN METALS</div>
+            <p>Premium Zinc Ingots for Foundry Applications</p>
+            <p style="margin-top: 1.5rem; color: var(--silver-dark); font-size: 0.9rem;">
+                © 2023 Varman Metals. All Rights Reserved. | Specializing in high-quality zinc ingots for industrial applications
+            </p>
+        </div>
+    </footer>
 
+    <script>
+        // Download Report Button
+        document.getElementById('downloadReport').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create a realistic download simulation
+            const btn = this;
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin btn-icon"></i> DOWNLOADING...';
+            btn.style.opacity = '0.8';
+            btn.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                // Simulate download completion
+                btn.innerHTML = '<i class="fas fa-check btn-icon"></i> REPORT DOWNLOADED';
+                btn.style.background = 'linear-gradient(135deg, #009B77, #007A5E)';
+                
+                // Show notification
+                alert('Lab report downloaded successfully! In a real implementation, this would download a PDF file.');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = 'linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%)';
+                    btn.style.opacity = '1';
+                    btn.style.pointerEvents = 'auto';
+                }, 3000);
+            }, 1500);
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add hover effect to gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.zIndex = '100';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+    </script>
 </body>
 </html>
