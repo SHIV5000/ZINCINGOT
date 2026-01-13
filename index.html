@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secondary|Remelted|Zinc Ingots</title>
+    <title>Secondary | Remelted | Zinc Ingots</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Reset & Base */
@@ -34,13 +34,46 @@
             --emerald-dark: #007A5E;
             --jet-black: #0a0a0a;
             --charcoal: #1a1a1a;
-            --light-gray: #f0f0f0;
+        }
+
+        /* Adjusted Header Image Section: 800x400 */
+        .top-banner {
+            width: 100%;
+            padding: 40px 20px 20px 20px;
+            background: var(--jet-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-container {
+            /* Fixed dimensions per request */
+            width: 800px;
+            height: 400px;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 15px rgba(212, 175, 55, 0.2);
+            border: 2px solid rgba(212, 175, 55, 0.4);
+            position: relative;
+            background: #111;
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 1s ease;
+        }
+
+        .banner-container:hover img {
+            transform: scale(1.08);
         }
         
-        /* Hero Section - Luxury Theme */
+        /* Hero Section */
         .hero {
             position: relative;
-            min-height: 100vh;
+            min-height: 50vh;
             background: 
                 radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(128, 0, 0, 0.15) 0%, transparent 50%),
@@ -49,15 +82,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.3;
+            padding: 2rem 0;
         }
         
         .hero-content {
@@ -71,13 +96,14 @@
             display: inline-block;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--jet-black);
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 2.5rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
         
         .hero-title {
@@ -98,6 +124,8 @@
             max-width: 800px;
             margin: 0 auto 3rem;
             line-height: 1.6;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
         
         /* Luxury Buttons */
@@ -106,33 +134,19 @@
             align-items: center;
             justify-content: center;
             padding: 1.2rem 3rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 12px;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            overflow: hidden;
             z-index: 1;
             margin: 0.5rem;
-            letter-spacing: 0.5px;
-            box-shadow: 
-                0 10px 20px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             border: none;
             cursor: pointer;
-        }
-        
-        .luxury-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
-            z-index: -1;
-            transition: opacity 0.4s;
+            text-transform: uppercase;
         }
         
         .luxury-btn-gold {
@@ -140,633 +154,215 @@
             color: var(--jet-black);
         }
         
-        .luxury-btn-gold:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 
-                0 15px 30px rgba(212, 175, 55, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
-        }
-        
         .luxury-btn-maroon {
             background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
             color: white;
         }
         
-        .luxury-btn-maroon:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 
-                0 15px 30px rgba(128, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-        }
-        
-        .luxury-btn-emerald {
-            background: linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%);
-            color: white;
-        }
-        
-        .luxury-btn-emerald:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 
-                0 15px 30px rgba(0, 155, 119, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-        }
-        
-        .btn-icon {
-            margin-right: 10px;
-            font-size: 1.3rem;
+        .luxury-btn:hover {
+            transform: translateY(-5px);
+            filter: brightness(1.1);
         }
         
         /* Sections */
         section {
-            padding: 5rem 2rem;
-            position: relative;
+            padding: 6rem 2rem;
         }
         
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
+            font-size: 3rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, var(--gold), var(--silver));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
         }
         
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold), var(--maroon));
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        /* Gallery Section */
-        .gallery-section {
-            background: linear-gradient(180deg, var(--charcoal) 0%, #242424 100%);
-            padding: 6rem 2rem;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 3rem;
-        }
-        
-        .gallery-item {
-            height: 250px;
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 2px solid transparent;
-            background: linear-gradient(45deg, #2a2a2a, #1f1f1f);
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.5),
-                0 0 0 3px rgba(212, 175, 55, 0.3);
-            border-color: var(--gold);
-            z-index: 10;
-        }
-        
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s;
-        }
-        
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-            color: white;
-            padding: 1.5rem;
-            transform: translateY(100%);
-            transition: transform 0.5s;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        /* Report Section */
-        .report-section {
-            background: linear-gradient(180deg, #242424 0%, var(--charcoal) 100%);
-        }
-        
+        /* Composition Table */
         .report-card {
-            background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 20px;
             padding: 3rem;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(212, 175, 55, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .report-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--gold), var(--maroon), var(--emerald));
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .composition-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2.5rem 0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        
-        .composition-table thead {
-            background: linear-gradient(90deg, var(--maroon), #5a0000);
+            margin: 2rem 0;
         }
         
         .composition-table th {
+            background: rgba(128, 0, 0, 0.3);
+            color: var(--gold);
             padding: 1.5rem;
             text-align: left;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: white;
-            letter-spacing: 0.5px;
-        }
-        
-        .composition-table tbody tr {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: background 0.3s;
-        }
-        
-        .composition-table tbody tr:hover {
-            background: rgba(212, 175, 55, 0.05);
+            border-bottom: 2px solid var(--gold);
         }
         
         .composition-table td {
-            padding: 1.5rem;
-            font-size: 1.05rem;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        .composition-table td:first-child {
-            font-weight: 600;
-            color: var(--silver);
-        }
-        
-        .composition-table td:nth-child(2) {
-            color: var(--gold);
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        
-        .verification {
-            text-align: center;
-            font-style: italic;
-            color: var(--silver-dark);
-            margin: 2rem 0;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-            border-left: 4px solid var(--gold);
+
+        .composition-table tr:hover {
+            background: rgba(212, 175, 55, 0.05);
         }
         
         /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            text-align: center;
-            padding: 6rem 2rem;
-        }
-        
         .contact-card {
             background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
-            border-radius: 20px;
-            padding: 4rem;
-            display: inline-block;
-            max-width: 800px;
-            width: 100%;
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            position: relative;
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
         }
-        
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--emerald), var(--gold));
-        }
-        
-        .contact-info {
-            margin: 2.5rem 0;
-        }
-        
+
         .contact-item {
-            margin: 1.5rem 0;
+            margin: 2rem 0;
+            font-size: 1.4rem;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            font-size: 1.2rem;
         }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            color: var(--jet-black);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+
+        .contact-item i {
+            color: var(--gold);
         }
         
         /* Footer */
         footer {
+            padding: 4rem 2rem;
+            background: #050505;
             text-align: center;
-            padding: 3rem 2rem;
-            background: #0a0a0a;
-            color: var(--silver-dark);
             border-top: 1px solid rgba(212, 175, 55, 0.1);
         }
-        
+
         .footer-logo {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--silver) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--gold);
+            letter-spacing: 3px;
             margin-bottom: 1rem;
         }
-        
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 3.5rem;
+
+        @media (max-width: 850px) {
+            .banner-container {
+                width: 95%; /* Responsive width for smaller screens */
+                height: auto;
+                aspect-ratio: 800 / 400;
             }
-            
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
+            .hero-title { font-size: 3rem; }
         }
-        
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .gallery {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .contact-card, .report-card {
-                padding: 2rem;
-            }
-            
-            .luxury-btn {
-                padding: 1rem 2rem;
-                font-size: 1.1rem;
-            }
-        }
-        
+
         @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-            
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .composition-table th, .composition-table td {
-                padding: 1rem;
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
+            .hero-title { font-size: 2.2rem; }
+            .luxury-btn { width: 100%; margin: 0.5rem 0; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Top Banner (800x400) -->
+    <div class="top-banner">
+        <div class="banner-container">
+            <img src="https://lh3.googleusercontent.com/d/1V6KtXVioijY3xOvQ9ISI1PfcDnHgfdhG" alt="Zinc Ingot Production Facility">
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge floating">Secondary|Remeletd|Purity 88% To 90%</div>
-            <h1 class="hero-title">Zinc Ingots</h1>
-            <p class="hero-subtitle">For Brass Foundaries</p>
+            <div class="hero-badge">SECONDARY | REMELTED | PURITY 88% - 90%</div>
+            <h1 class="hero-title">ZINC INGOTS</h1>
+            <p class="hero-subtitle">Premium Quality for Brass Foundries</p>
             <div class="hero-buttons">
-                <a href="#gallery" class="luxury-btn luxury-btn-gold">
-                    <i class="fas fa-gem btn-icon"></i> View Zinc Ingots
+                <a href="#report" class="luxury-btn luxury-btn-gold">
+                    <i class="fas fa-microscope" style="margin-right: 10px;"></i> View Specs
                 </a>
                 <a href="#contact" class="luxury-btn luxury-btn-maroon">
-                    <i class="fas fa-phone-alt btn-icon"></i> GET QUOTE NOW
+                    <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> WhatsApp Inquiry
                 </a>
             </div>
         </div>
     </section>
-    
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
+
+    <!-- Chemical Report -->
+    <section id="report">
         <div class="container">
-            <h2 class="section-title">Zinc Ingots(Real Images)</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: var(--silver);"></p>
-            
-            <div class="gallery">
-                <!-- 8 Image Boxes -->
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a3a3a, #2a2a2a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>High-Grade Zinc Ingots</h3>
-                        <p>99.10% Pure Zinc</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a3a2a, #3a2a1a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Factory Production</h3>
-                        <p>State-of-the-art manufacturing</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #2a3a4a, #1a2a3a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Quality Inspection</h3>
-                        <p>Spectrometer verified</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a4a3a, #2a3a2a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Ingot Storage</h3>
-                        <p>Properly stored inventory</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a2a3a, #3a1a2a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Packaging</h3>
-                        <p>Secure packaging for shipping</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #2a4a4a, #1a3a3a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Shipment Ready</h3>
-                        <p>On-time delivery guaranteed</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #4a4a2a, #3a3a1a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Laboratory Testing</h3>
-                        <p>Chemical composition analysis</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-img" style="background: linear-gradient(135deg, #3a2a4a, #2a1a3a);"></div>
-                    <div class="gallery-overlay">
-                        <h3>Customer Applications</h3>
-                        <p>Used in brass utensils & parts</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Report Section -->
-    <section id="report" class="report-section">
-        <div class="container">
-            <h2 class="section-title">CHEMICAL COMPOSITION</h2>
-            
+            <h2 class="section-title">Chemical Composition</h2>
             <div class="report-card">
-                <p style="text-align: center; margin-bottom: 1.5rem; color: var(--silver); font-size: 1.1rem;">Our zinc ingots meet stringent quality standards with the following certified composition</p>
-                
                 <table class="composition-table">
                     <thead>
                         <tr>
-                            <th>Element</th>
-                            <th>Composition</th>
-                            <th>Standard</th>
+                            <th>Chemical Element</th>
+                            <th>Composition (%)</th>
+                            <th>Quality Level</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Zinc (Zn)</td>
-                            <td>99.10%</td>
-                            <td>Primary Component</td>
+                            <td><strong>Zinc (Zn)</strong></td>
+                            <td style="color: var(--gold-light); font-weight: bold;">99.10%</td>
+                            <td>Certified High Purity</td>
                         </tr>
                         <tr>
                             <td>Lead (Pb)</td>
                             <td>0.835% Max</td>
-                            <td>Within Industry Limits</td>
+                            <td>Standard Grade</td>
                         </tr>
                         <tr>
                             <td>Iron (Fe)</td>
                             <td>0.065% Max</td>
-                            <td>Within Industry Limits</td>
+                            <td>Trace Amount</td>
                         </tr>
                         <tr>
-                            <td>Tin (Sn)</td>
-                            <td>Traces</td>
-                            <td>Negligible</td>
-                        </tr>
-                        <tr>
-                            <td>Aluminum (Al)</td>
+                            <td>Tin / Aluminum</td>
                             <td>Traces</td>
                             <td>Negligible</td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <div class="verification">
-                    <i class="fas fa-certificate" style="color: var(--gold); margin-right: 10px;"></i>
-                    SPECTROMETER VERIFIED AT VARIMAN LAB FACILITY
-                </div>
-                
-                <div style="text-align: center;">
-                    <a href="#" class="luxury-btn luxury-btn-emerald" id="downloadReport">
-                        <i class="fas fa-download btn-icon"></i> DOWNLOAD FULL LAB REPORT (PDF)
-                    </a>
-                </div>
+                <p style="text-align: center; color: var(--silver-dark); font-style: italic;">
+                    * All batches are Spectrometer verified at Varman Metals Lab.
+                </p>
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">CONTACT US</h2>
-            
-            <div class="contact-card">
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--silver);">Get in touch for quotations, technical specifications, or any inquiries</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <strong style="color: var(--gold);">Email:</strong>
-                            <a href="mailto:info@varmanmetals.in" style="color: white; text-decoration: none; font-size: 1.3rem; margin-left: 10px;">
-                                info@varmanmetals.in
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <strong style="color: var(--gold);">WhatsApp:</strong>
-                            <span style="color: white; font-size: 1.3rem; margin-left: 10px;">
-                                +91-9898989898
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 3rem;">
-                    <a href="https://wa.me/919898989898" class="luxury-btn luxury-btn-gold" target="_blank" style="margin-right: 15px;">
-                        <i class="fab fa-whatsapp btn-icon"></i> MESSAGE ON WHATSAPP
-                    </a>
-                    <a href="mailto:info@varmanmetals.in" class="luxury-btn luxury-btn-maroon">
-                        <i class="fas fa-paper-plane btn-icon"></i> SEND EMAIL
-                    </a>
-                </div>
+    <section id="contact">
+        <div class="contact-card">
+            <h2 style="margin-bottom: 2rem; color: var(--gold);">Get a Quote</h2>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@varmanmetals.in</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>+91-9898989898</span>
+            </div>
+            <div style="margin-top: 3rem;">
+                <a href="https://wa.me/919898989898" class="luxury-btn luxury-btn-gold">
+                    Start Chat Now
+                </a>
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-logo">VARMAN METALS</div>
-            <p>Premium Zinc Ingots for Foundry Applications</p>
-            <p style="margin-top: 1.5rem; color: var(--silver-dark); font-size: 0.9rem;">
-                © 2023 Varman Metals. All Rights Reserved. | Specializing in high-quality zinc ingots for industrial applications
-            </p>
-        </div>
+        <div class="footer-logo">VARMAN METALS</div>
+        <p>© 2026 Varman Metals | Excellence in Non-Ferrous Alloys</p>
     </footer>
 
-    <script>
-        // Download Report Button
-        document.getElementById('downloadReport').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Create a realistic download simulation
-            const btn = this;
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin btn-icon"></i> DOWNLOADING...';
-            btn.style.opacity = '0.8';
-            btn.style.pointerEvents = 'none';
-            
-            setTimeout(() => {
-                // Simulate download completion
-                btn.innerHTML = '<i class="fas fa-check btn-icon"></i> REPORT DOWNLOADED';
-                btn.style.background = 'linear-gradient(135deg, #009B77, #007A5E)';
-                
-                // Show notification
-                alert('Lab report downloaded successfully! In a real implementation, this would download a PDF file.');
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = 'linear-gradient(135deg, var(--emerald) 0%, var(--emerald-dark) 100%)';
-                    btn.style.opacity = '1';
-                    btn.style.pointerEvents = 'auto';
-                }, 3000);
-            }, 1500);
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add hover effect to gallery items
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.zIndex = '100';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.zIndex = '1';
-            });
-        });
-    </script>
 </body>
 </html>
