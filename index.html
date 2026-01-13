@@ -22,73 +22,76 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            /* Molten Background from Reference */
             background-image: 
                 linear-gradient(to bottom, rgba(13, 13, 13, 0.85), rgba(13, 13, 13, 0.95)),
-                url('3.jfif');
+                url('https://sigmamelleable.com/wp-content/uploads/2024/10/molten-metal-big-ladle-container-metallurgical-foundry-plant-heavy-industry-scaled.jpg');
             background-attachment: fixed;
             background-size: cover;
+            padding: 20px;
         }
 
         .mono { font-family: 'IBM Plex Mono', monospace; }
 
-        /* MAIN SLANT CONTAINER */
+        /* FULL PAGE SLANT CONTAINER */
         .showcase-container {
-            width: 95%;
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1400px;
             background: #fff;
             color: #1a1a1a;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
             display: flex;
-            flex-direction: column;
+            min-height: 85vh;
+            flex-direction: row-reverse; /* Flip the layout: Image right, Content left */
         }
 
-        /* THE SLANT HEADER SECTION */
-        .slant-header {
+        /* RIGHT SIDE: FULL HEIGHT SLANT IMAGE */
+        .slant-image-sidebar {
+            flex: 0 0 45%;
             position: relative;
-            height: 450px;
-            display: flex;
+            overflow: hidden;
+            /* Slant angled from the left side now */
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 2;
             background: #000;
         }
 
-        /* Left Side: Slanted Crucible Image */
-        .slant-image {
-            flex: 1.2;
-            position: relative;
-            overflow: hidden;
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
-            z-index: 2;
-        }
-
-        .slant-image img {
+        .slant-image-sidebar img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: 70% center; 
             filter: brightness(1.1) contrast(1.1);
         }
 
-        /* Right Side: Dark Info Overlay */
-        .slant-content {
+        /* LEFT SIDE: CONTENT AREA */
+        .content-area {
             flex: 1;
-            background: #1a1a1a;
-            color: white;
-            padding: 60px 40px;
-            margin-left: -100px; /* Overlap effect */
+            margin-right: -10%; /* Overlap the slant on the right */
+            padding: 60px 120px 60px 80px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             z-index: 1;
+            background: white;
         }
 
-        /* CONTENT GRID BELOW */
+        .hero-text-block {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px;
+            margin-bottom: 40px;
+            margin-right: -150px; /* Stronger overlap for the header into the image */
+            position: relative;
+            z-index: 3;
+            box-shadow: -20px 20px 60px rgba(0,0,0,0.3);
+        }
+
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            padding: 60px 50px;
-            background: white;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 20px;
         }
 
         .info-column h3 {
@@ -98,22 +101,23 @@
             margin-bottom: 20px;
             border-bottom: 3px solid #eee;
             padding-bottom: 10px;
+            color: #000;
         }
 
         .info-column p {
             color: #555;
             line-height: 1.6;
-            font-size: 15px;
+            font-size: 16px;
         }
 
         .analysis-table {
             width: 100%;
-            font-size: 14px;
+            font-size: 15px;
             margin-top: 10px;
         }
 
         .analysis-table td {
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #f0f0f0;
         }
 
@@ -131,7 +135,7 @@
         .btn-action {
             background: var(--foundry-gold);
             color: black;
-            padding: 12px 24px;
+            padding: 14px 32px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
@@ -139,12 +143,25 @@
             gap: 10px;
             margin-top: 20px;
             width: fit-content;
+            transition: transform 0.2s ease;
         }
 
-        @media (max-width: 900px) {
-            .slant-header { flex-direction: column; height: auto; }
-            .slant-image { clip-path: none; height: 300px; }
-            .slant-content { margin-left: 0; padding: 40px; }
+        .btn-action:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-box {
+            background: #f9f9f9;
+            padding: 25px;
+            border-left: 5px solid var(--foundry-gold);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .showcase-container { flex-direction: column-reverse; }
+            .slant-image-sidebar { flex: none; height: 350px; clip-path: none; }
+            .content-area { margin-right: 0; padding: 40px; }
+            .hero-text-block { margin-right: 0; padding: 40px; }
             .info-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -152,84 +169,92 @@
 <body>
 
     <div class="showcase-container">
-        <!-- TOP SLANT SECTION -->
-        <div class="slant-header">
-            <div class="slant-image">
-                <img src="3.jfif" alt="Foundry Crucible Pouring">
-            </div>
-            <div class="slant-content">
+        <!-- RIGHT SIDE: SLANT IMAGE -->
+        <div class="slant-image-sidebar">
+            <img src="https://sigmamelleable.com/wp-content/uploads/2024/10/molten-metal-big-ladle-container-metallurgical-foundry-plant-heavy-industry-scaled.jpg" alt="Industrial Molten Metal Foundry">
+        </div>
+
+        <!-- LEFT SIDE: ALL CONTENT -->
+        <div class="content-area">
+            <!-- Header/Hero Overlay -->
+            <div class="hero-text-block">
                 <div class="gold-tag">Industrial Grade</div>
-                <h1 class="text-5xl font-black italic leading-tight mb-4">Foundry-Optimized <br>Zinc Ingots</h1>
-                <p class="text-white/60 mb-6 text-sm leading-relaxed">
-                    Engineered for non-ferrous casting. Our secondary remelted zinc ensures high recovery rates and zero-defect finishes for brass bhattis.
+                <h1 class="text-6xl font-black italic leading-tight mb-4 tracking-tighter">Foundry-Optimized <br>Zinc Ingots</h1>
+                <p class="text-white/60 mb-6 text-base leading-relaxed max-w-xl">
+                    Premium secondary remelted zinc blocks engineered for non-ferrous casting. Our process ensures high recovery rates and zero-defect finishes for heavy industrial bhattis.
                 </p>
-                <a href="https://wa.me/919898989898" class="btn-action">
-                    GET LIVE QUOTE <span>→</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- MAIN INFORMATION GRID -->
-        <div class="info-grid">
-            
-            <!-- Column 1: Overview -->
-            <div class="info-column">
-                <h3>Foundry Showcase</h3>
-                <p>
-                    We provide high-purity zinc blocks that act as the backbone for quality brass production. Whether you are manufacturing <b>domestic utensils</b> or <b>mechanical spare parts</b>, our alloy profile is balanced to minimize slag and maximize your bottom line.
-                </p>
-                <div class="mt-6 flex items-center gap-4">
-                    <img src="4.jfif" class="w-12 h-12 rounded-full border border-gray-200" alt="Varman Logo">
-                    <span class="mono text-[10px] uppercase font-bold tracking-widest text-gray-400">Varman Metals <br>Est. Excellence</span>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/919898989898" class="btn-action">
+                        GET LIVE QUOTE <span>→</span>
+                    </a>
+                    <div class="mono text-[10px] uppercase font-bold tracking-widest text-white/40">
+                        Batch Ref: VM-JAN-26 <br>LME Linked Pricing
+                    </div>
                 </div>
             </div>
 
-            <!-- Column 2: Chemical Analysis -->
-            <div class="info-column">
-                <h3>Chemical Analysis</h3>
-                <table class="analysis-table">
-                    <tr>
-                        <td class="font-bold">Zinc (Zn)</td>
-                        <td class="text-right mono font-bold text-green-600">99.10%</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold">Lead (Pb)</td>
-                        <td class="text-right mono">0.035% Max</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold">Iron (Fe)</td>
-                        <td class="text-right mono">0.005% Max</td>
-                    </tr>
-                    <tr>
-                        <td class="font-bold">Tin/Al</td>
-                        <td class="text-right mono text-gray-400 italic">Traces</td>
-                    </tr>
-                </table>
-                <p class="text-[11px] mt-4 italic text-gray-400 uppercase tracking-tighter">
-                    *Spectrometer verified batch VM-2026.
-                </p>
+            <!-- Detail Grid -->
+            <div class="info-grid">
+                <!-- Column 1: Chemical & Specs -->
+                <div class="info-column">
+                    <h3>Chemical Analysis</h3>
+                    <table class="analysis-table">
+                        <tr>
+                            <td class="font-bold">Zinc (Zn)</td>
+                            <td class="text-right mono font-bold text-green-600">99.10%</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Lead (Pb)</td>
+                            <td class="text-right mono">0.035% Max</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Iron (Fe)</td>
+                            <td class="text-right mono">0.005% Max</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Tin/Al</td>
+                            <td class="text-right mono text-gray-400 italic">Traces</td>
+                        </tr>
+                    </table>
+                    <p class="text-[12px] mt-4 italic text-gray-400 uppercase">
+                        *Spectrometer verified at Varman Lab Facility.
+                    </p>
+
+                    <div class="mt-10 p-6 bg-gray-50 border border-gray-100 flex items-center gap-4">
+                        <img src="4.jfif" class="w-14 h-14 rounded-full border-2 border-white shadow-sm" alt="Varman Logo">
+                        <div>
+                            <p class="text-xs font-black uppercase tracking-widest text-gray-400">Varman Metals</p>
+                            <p class="text-sm font-bold">Industrial Metallurgy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Application & Contact -->
+                <div class="info-column">
+                    <h3>Applications</h3>
+                    <p class="mb-6">
+                        Specifically balanced for <b>Brass Utensils</b> and <b>Mechanical Spare Parts</b>. Our zinc acts as a reliable backbone, minimizing slag and improving fluidity in the melt.
+                    </p>
+                    
+                    <div class="contact-box">
+                        <h4 class="text-xs font-black uppercase text-gray-400 mb-3 tracking-widest">Trade Inquiry</h4>
+                        <div class="mb-4">
+                            <p class="text-[10px] mono uppercase text-foundry-gold">Direct WhatsApp</p>
+                            <p class="text-2xl font-black">+91-9898989898</p>
+                        </div>
+                        <div>
+                            <p class="text-[10px] mono uppercase text-foundry-gold">Email Desk</p>
+                            <p class="text-lg font-bold">info@varmanmetals.in</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Column 3: Contact & Logistics -->
-            <div class="info-column">
-                <h3>Trade Desk</h3>
-                <p class="mb-4">Direct dispatch available from plant for bulk orders. Competitive LME-linked pricing.</p>
-                <div class="bg-gray-50 p-4 border-l-4 border-[#c5a059]">
-                    <p class="text-xs font-bold text-gray-400 uppercase mb-1">WhatsApp Trading</p>
-                    <p class="text-xl font-black">+91-9898989898</p>
-                </div>
-                <div class="mt-4 bg-gray-50 p-4 border-l-4 border-black">
-                    <p class="text-xs font-bold text-gray-400 uppercase mb-1">Email Inquiry</p>
-                    <p class="text-lg font-bold">info@varmanmetals.in</p>
-                </div>
+            <!-- Footer Info -->
+            <div class="mt-auto pt-10 border-t flex justify-between items-center text-[10px] mono uppercase text-gray-400 tracking-[0.3em]">
+                <span>Logistics: Global Dispatch Available</span>
+                <span>© 2026 Varman Metals & Foundries</span>
             </div>
-
-        </div>
-
-        <!-- Footer Bar -->
-        <div class="bg-gray-100 py-4 px-12 border-t flex justify-between items-center text-[10px] mono uppercase text-gray-400 tracking-[0.3em]">
-            <span>Varman Metals & Foundries</span>
-            <span>Batch Ref: VM-JAN-26</span>
         </div>
     </div>
 
