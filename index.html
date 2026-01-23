@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varman Metals | Premium Zinc Ingots</title>
+    <meta name="description" content="High-purity zinc ingots for industrial applications. 99.99% purity with competitive pricing and sustainable production.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --carbon-black: #000000;
+            --ingot-silver: #c0c0c0;
+            --safety-yellow: #ffff00;
+            --industrial-gray: #1a1a1a;
+            --text-light: #f0f0f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--carbon-black);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1.5rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--ingot-silver);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            height: 50px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+        
+        .company-name {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--ingot-silver);
+            letter-spacing: 1px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .nav-link {
+            color: var(--ingot-silver);
+            text-decoration: none;
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--safety-yellow);
+        }
+        
+        .nav-link.active {
+            color: var(--safety-yellow);
+        }
+        
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--safety-yellow);
+        }
+        
+        .search-icon {
+            color: var(--ingot-silver);
+            cursor: pointer;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .search-icon:hover {
+            color: var(--safety-yellow);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            margin-top: 80px;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('INGOTS.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 3rem;
+            background-color: rgba(26, 26, 26, 0.85);
+            border-left: 4px solid var(--safety-yellow);
+            margin-left: 5%;
+        }
+        
+        .hero-tagline {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-tagline span {
+            color: var(--safety-yellow);
+        }
+        
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--ingot-silver);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--safety-yellow);
+            color: var(--carbon-black);
+            padding: 1rem 2.5rem;
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 0, 0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: #e6e600;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 0, 0.3);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background-color: var(--industrial-gray);
+        }
+        
+        .section-title {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            color: var(--text-light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2.5rem;
+            border: 1px solid rgba(192, 192, 192, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: var(--safety-yellow);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--safety-yellow);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .feature-description {
+            color: var(--ingot-silver);
+        }
+        
+        /* Performance Badge */
+        .performance-badge {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--carbon-black);
+            color: var(--safety-yellow);
+            padding: 0.8rem 1.5rem;
+            font-family: 'Inter Tight', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 2px solid var(--safety-yellow);
+            border-radius: 4px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .badge-icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--carbon-black);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--industrial-gray);
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-text {
+            color: var(--ingot-silver);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-contact {
+            margin-top: 2rem;
+            color: var(--ingot-silver);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+            }
+            
+            .nav {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-tagline {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content {
+                margin-left: 0;
+                padding: 2rem;
+            }
+            
+            .features {
+                padding: 4rem 1rem;
+            }
+            
+            .performance-badge {
+                bottom: 1rem;
+                right: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Search Panel (Hidden by default) */
+        .search-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        
+        .search-panel.active {
+            display: flex;
+        }
+        
+        .search-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            background-color: transparent;
+            border: 2px solid var(--safety-yellow);
+            color: var(--text-light);
+            font-family: 'Inter Tight', sans-serif;
+            margin-bottom: 2rem;
+        }
+        
+        .close-search {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--ingot-silver);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-search:hover {
+            color: var(--safety-yellow);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-container">
+            <img src="LOGO.webp" alt="Varman Metals Logo" class="logo">
+            <div class="company-name">VARMAN METALS</div>
+        </div>
+        
+        <nav class="nav">
+            <a href="#" class="nav-link active">HOME</a>
+            <a href="#" class="nav-link">ZINC INGOTS</a>
+            <a href="#" class="nav-link">ZAMAK SERIES</a>
+            <a href="#" class="nav-link">ABOUT US</a>
+            <a href="#" class="nav-link">CONTACT</a>
+        </nav>
+        
+        <div class="search-icon" id="searchToggle">
+            🔍
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-tagline">
+                INDUSTRIAL-<span>GRADE</span><br>
+                ZINC INGOTS
+            </h1>
+            <p class="hero-description">
+                99.99% purity zinc ingots for galvanizing and industrial applications. 
+                Engineered for strength, consistency, and superior performance in demanding environments.
+            </p>
+            <a href="#contact" class="cta-button">GET QUOTE NOW</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">WHY VARMAN METALS</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">ULTRA-HIGH PURITY</h3>
+                <p class="feature-description">
+                    99.99% pure zinc with minimal impurities. Consistent quality batch after batch, 
+                    meeting international standards for industrial applications.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3 class="feature-title">SUSTAINABLE PRODUCTION</h3>
+                <p class="feature-description">
+                    Carbon-negative manufacturing process. Our production exceeds environmental 
+                    standards while delivering superior quality.
+                </p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3 class="feature-title">GLOBAL LOGISTICS</h3>
+                <p class="feature-description">
+                    Reliable worldwide shipping with competitive delivery times. 
+                    Bulk orders and custom packaging available.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Badge -->
+    <div class="performance-badge">
+        <span class="badge-icon">⚡</span>
+        <span>100% SUSTAINABLE / 100ms SPEED</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <img src="LOGO.webp" alt="Varman Metals Logo" class="footer-logo">
+            <p class="footer-text">
+                VARMAN METALS | INDUSTRIAL ZINC INGOTS & ALLOYS
+            </p>
+            <p class="footer-text">
+                Specializing in high-purity zinc products for galvanizing, die-casting, and industrial applications.
+            </p>
+            <div class="footer-contact">
+                <p>📞 +91 98765 43210 | 📧 contact@varmanmetals.in</p>
+                <p>📍 Industrial Estate, Metal Park, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel">
+        <div class="close-search" id="closeSearch">×</div>
+        <input type="text" class="search-input" placeholder="Search products, specifications, pricing...">
+        <p style="color: var(--ingot-silver); margin-top: 1rem;">
+            Try: "zinc ingot price" or "galvanizing zinc specifications"
+        </p>
+    </div>
+
+    <script>
+        // Search functionality
+        const searchToggle = document.getElementById('searchToggle');
+        const searchPanel = document.getElementById('searchPanel');
+        const closeSearch = document.getElementById('closeSearch');
+        const searchInput = document.querySelector('.search-input');
+        
+        searchToggle.addEventListener('click', () => {
+            searchPanel.classList.add('active');
+            searchInput.focus();
+        });
+        
+        closeSearch.addEventListener('click', () => {
+            searchPanel.classList.remove('active');
+        });
+        
+        // Close search panel on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchPanel.classList.remove('active');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animate feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Apply animation to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
