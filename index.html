@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varman Metals | Premium Zinc Ingots</title>
-    <meta name="description" content="High-purity zinc ingots for industrial applications. 99.99% purity with competitive pricing and sustainable production.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Critical SEO Meta Tags -->
+    <title>Varman Metals | Zinc Ingot Supplier for Die Cast & Galvanizing PAN India | High Grade, SHG 99.995%, Pure Zinc</title>
+    <meta name="description" content="Varman Metals supplies premium Zinc Ingots including High Grade (HG), Special High Grade (SHG 99.995%), Pure Zinc (99.99%), PMI Zinc Ingots, Remelted Zinc & Zinc Alloys for die casting, galvanizing & brass alloys.">
+    <meta name="keywords" content="Zinc Ingots, Zinc Ingots Price, High Grade Zinc Ingots, SHG Zinc Ingots, Pure Zinc Ingots 99.99, Zinc Alloys, Zamak 3, Zamak 5, Galvanizing Zinc, Die Casting Zinc">
+    <link rel="canonical" href="https://varmanmetals.in/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Varman Metals | Premium Zinc Ingots Supplier - High Grade, SHG 99.995%">
+    <meta property="og:description" content="Industrial-grade Zinc Ingots supplier for galvanizing, die casting, and brass alloys across India.">
+    <meta property="og:image" content="https://varmanmetals.in/images/ingot-heap.webp">
+    <meta property="og:url" content="https://varmanmetals.in/">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "IndustrialSupplyStore",
+        "name": "Varman Metals",
+        "description": "Premium supplier of Zinc Ingots including High Grade Zinc Ingots, SHG Zinc Ingots 99.995%, Pure Zinc Ingots 99.99%",
+        "url": "https://varmanmetals.in/",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Meerut",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-6396811315",
+            "contactType": "Sales"
+        }
+    }
+    </script>
+    
+    <!-- Inline Critical CSS (Fastest Loading) -->
     <style>
         :root {
             --carbon-black: #000000;
@@ -15,8 +46,11 @@
             --safety-yellow: #ffff00;
             --industrial-gray: #1a1a1a;
             --text-light: #f0f0f0;
+            --blue-accent: #1e40af;
+            --green-accent: #10b981;
         }
         
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -24,17 +58,17 @@
         }
         
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--carbon-black);
             color: var(--text-light);
             line-height: 1.6;
             overflow-x: hidden;
         }
         
-        /* Header Styles */
+        /* Header */
         .header {
-            background-color: rgba(0, 0, 0, 0.9);
-            padding: 1.5rem 2rem;
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 1rem 2rem;
             position: fixed;
             width: 100%;
             top: 0;
@@ -43,71 +77,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            backdrop-filter: blur(10px);
         }
         
         .logo {
-            height: 50px;
-            width: auto;
+            height: 40px;
             filter: brightness(0) invert(1);
         }
         
         .company-name {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            font-weight: 900;
             color: var(--ingot-silver);
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
         
         .nav {
             display: flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
         }
         
         .nav-link {
             color: var(--ingot-silver);
             text-decoration: none;
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 500;
-            font-size: 1.1rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-            position: relative;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
         
         .nav-link:hover {
-            color: var(--safety-yellow);
-        }
-        
-        .nav-link.active {
-            color: var(--safety-yellow);
-        }
-        
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--safety-yellow);
-        }
-        
-        .search-icon {
-            color: var(--ingot-silver);
-            cursor: pointer;
-            font-size: 1.3rem;
-            transition: color 0.3s ease;
-        }
-        
-        .search-icon:hover {
             color: var(--safety-yellow);
         }
         
@@ -117,8 +117,7 @@
             position: relative;
             display: flex;
             align-items: center;
-            padding: 0 2rem;
-            margin-top: 80px;
+            padding: 6rem 2rem 2rem;
         }
         
         .hero-background {
@@ -130,398 +129,454 @@
             background-image: url('INGOTS.webp');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             opacity: 0.15;
             z-index: -1;
         }
         
         .hero-content {
             max-width: 800px;
-            padding: 3rem;
-            background-color: rgba(26, 26, 26, 0.85);
-            border-left: 4px solid var(--safety-yellow);
-            margin-left: 5%;
+            margin: 0 auto;
+            text-align: center;
         }
         
-        .hero-tagline {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 900;
+        .hero-title {
             font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
         }
         
-        .hero-tagline span {
+        .hero-subtitle {
+            font-size: 1.5rem;
             color: var(--safety-yellow);
+            margin-bottom: 2rem;
+            font-weight: 600;
         }
         
-        .hero-description {
+        /* Product Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background: var(--industrial-gray);
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(192, 192, 192, 0.2);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--safety-yellow);
+        }
+        
+        .product-name {
+            color: var(--safety-yellow);
             font-size: 1.2rem;
-            color: var(--ingot-silver);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--safety-yellow);
-            color: var(--carbon-black);
-            padding: 1rem 2.5rem;
-            font-family: 'Inter Tight', sans-serif;
+            margin-bottom: 0.5rem;
             font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 255, 0, 0.2);
         }
         
-        .cta-button:hover {
-            background-color: #e6e600;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 255, 0, 0.3);
+        .product-price {
+            color: #10b981;
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin: 1rem 0;
         }
         
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background-color: var(--industrial-gray);
+        /* Cities Section */
+        .cities-section {
+            padding: 4rem 2rem;
+            background: var(--carbon-black);
         }
         
         .section-title {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 900;
-            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 4rem;
-            color: var(--text-light);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--safety-yellow);
+            font-weight: 900;
         }
         
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+        .cities-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .feature-card {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2.5rem;
-            border: 1px solid rgba(192, 192, 192, 0.1);
-            transition: all 0.3s ease;
+        .city-tag {
+            background: rgba(30, 64, 175, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--ingot-silver);
+            font-weight: 600;
         }
         
-        .feature-card:hover {
-            border-color: var(--safety-yellow);
-            transform: translateY(-5px);
+        /* Social Links */
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(30, 64, 175, 0.1);
         }
         
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--safety-yellow);
-            margin-bottom: 1.5rem;
+        .social-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
         }
         
-        .feature-title {
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-light);
+        .social-btn:hover {
+            transform: translateY(-2px);
         }
         
-        .feature-description {
-            color: var(--ingot-silver);
+        .btn-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+        
+        .btn-indiamart {
+            background: linear-gradient(145deg, #2e3192, #1b1464);
+            color: white;
+        }
+        
+        .btn-justdial {
+            background: white;
+            color: #ff6a00;
+            border: 2px solid #ff6a00;
+        }
+        
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-button {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-call {
+            background: var(--safety-yellow);
+            color: var(--carbon-black);
+        }
+        
+        .cta-whatsapp {
+            background: #25D366;
+            color: white;
         }
         
         /* Performance Badge */
         .performance-badge {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: var(--carbon-black);
+            bottom: 1rem;
+            right: 1rem;
+            background: var(--carbon-black);
             color: var(--safety-yellow);
-            padding: 0.8rem 1.5rem;
-            font-family: 'Inter Tight', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
             border: 2px solid var(--safety-yellow);
-            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
             z-index: 1000;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         
-        .badge-icon {
-            font-size: 1.2rem;
+        /* SEO Hidden Content */
+        .seo-content {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
         
-        /* Footer */
-        .footer {
-            background-color: var(--carbon-black);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--industrial-gray);
-        }
-        
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .footer-logo {
-            height: 40px;
-            margin-bottom: 1.5rem;
-            filter: brightness(0) invert(1);
-        }
-        
-        .footer-text {
-            color: var(--ingot-silver);
-            margin-bottom: 1rem;
-        }
-        
-        .footer-contact {
-            margin-top: 2rem;
-            color: var(--ingot-silver);
-        }
-        
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
                 padding: 1rem;
             }
             
             .nav {
-                gap: 1.5rem;
                 flex-wrap: wrap;
                 justify-content: center;
             }
             
-            .hero-tagline {
+            .hero-title {
                 font-size: 2.5rem;
             }
             
-            .hero-content {
-                margin-left: 0;
-                padding: 2rem;
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .features {
-                padding: 4rem 1rem;
-            }
-            
-            .performance-badge {
-                bottom: 1rem;
-                right: 1rem;
-                font-size: 0.8rem;
+            .social-bar {
+                flex-wrap: wrap;
             }
         }
         
-        /* Search Panel (Hidden by default) */
-        .search-panel {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 2rem;
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .search-panel.active {
-            display: flex;
-        }
-        
-        .search-input {
-            width: 100%;
-            max-width: 600px;
-            padding: 1.5rem;
-            font-size: 1.5rem;
-            background-color: transparent;
-            border: 2px solid var(--safety-yellow);
-            color: var(--text-light);
-            font-family: 'Inter Tight', sans-serif;
-            margin-bottom: 2rem;
-        }
-        
-        .close-search {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            color: var(--ingot-silver);
-            font-size: 2rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .close-search:hover {
-            color: var(--safety-yellow);
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
         }
     </style>
 </head>
 <body>
+    <!-- SEO Hidden Content for Search Engines -->
+    <div class="seo-content" aria-hidden="true">
+        <h1>Varman Metals - Premium Zinc Ingots Supplier</h1>
+        <h2>High Grade Zinc Ingots, SHG Zinc Ingots 99.995%, Pure Zinc Ingots 99.99%</h2>
+        <p>Varman Metals is a leading manufacturer and supplier of premium Zinc Ingots including High Grade Zinc Ingots, Special High Grade Zinc Ingots (SHG) with 99.995% purity, Pure Zinc Ingots 99.99%, PMI Zinc Ingots, Remelted Zinc Ingots, Secondary Zinc Ingots, and Zinc Alloy Ingots. We supply Zinc for die casting applications including Zamak 3 and Zamak 5 alloys, Unwrought Zinc for various industrial uses, and Recycled Zinc Ingots for cost-effective solutions.</p>
+        
+        <h3>Technical Specifications & Quality</h3>
+        <p>Our zinc ingots come in purity levels of 99.995%, 99.99%, and 99.98% including Electrolytic Zinc and Non-alloy Zinc. Products classified under HSN Codes 7901, 790111, 79011110, and 790112. We handle Zinc Scrap and Blue Dust. All materials provided in Solid Form with Silver Color appearance.</p>
+        
+        <h3>Industrial Applications</h3>
+        <p>We serve industries requiring Zinc for Galvanizing, Die Casting, Brass Alloys, and general industrial applications. Our Zinc Ingots are used as Raw Material across PAN India including industrial hubs like Jamnagar, Ludhiana, Mumbai, Meerut, Moradabad, Secunderabad, Ahmedabad, Nagpur, Rajkot, Aligarh, Pune, New Delhi, Bhiwandi, and Kolkata.</p>
+        
+        <h3>Pricing and Order Information</h3>
+        <p>Competitive pricing at ₹225 - ₹310 per Kg with GST 18%. Minimum Order Quantity starts from 1000 Kg (1 Metric Ton). We offer Sample Available for quality verification. Units available in Kilogram and Metric Tons. Market Price competitiveness guaranteed.</p>
+        
+        <h3>Business Verification & Service</h3>
+        <p>As a TrustSEAL Verified supplier and Verified Exporter, we maintain the highest quality standards. We serve as Manufacturer, Wholesale Trader, and Supplier to industries across India. Contact Supplier for Get Best Price and View Mobile Number for immediate response.</p>
+    </div>
+
     <!-- Header -->
     <header class="header">
-        <div class="logo-container">
+        <div style="display: flex; align-items: center; gap: 1rem;">
             <img src="LOGO.webp" alt="Varman Metals Logo" class="logo">
             <div class="company-name">VARMAN METALS</div>
         </div>
         
         <nav class="nav">
-            <a href="#" class="nav-link active">HOME</a>
+            <a href="#" class="nav-link">HOME</a>
             <a href="#" class="nav-link">ZINC INGOTS</a>
-            <a href="#" class="nav-link">ZAMAK SERIES</a>
-            <a href="#" class="nav-link">ABOUT US</a>
+            <a href="#" class="nav-link">ZAMAK ALLOYS</a>
+            <a href="#" class="nav-link">ABOUT</a>
             <a href="#" class="nav-link">CONTACT</a>
         </nav>
-        
-        <div class="search-icon" id="searchToggle">
-            🔍
-        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background"></div>
-        <div class="hero-content">
-            <h1 class="hero-tagline">
-                INDUSTRIAL-<span>GRADE</span><br>
-                ZINC INGOTS
-            </h1>
-            <p class="hero-description">
-                99.99% purity zinc ingots for galvanizing and industrial applications. 
-                Engineered for strength, consistency, and superior performance in demanding environments.
+        <div class="hero-content fade-in">
+            <h1 class="hero-title">PREMIUM ZINC INGOTS</h1>
+            <p class="hero-subtitle">High Grade • SHG 99.995% • Pure Zinc 99.99%</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--ingot-silver);">
+                Supplier for Die Casting & Galvanizing PAN India
             </p>
-            <a href="#contact" class="cta-button">GET QUOTE NOW</a>
+            
+            <div class="cta-buttons">
+                <a href="tel:+916396811315" class="cta-button cta-call">
+                    <span style="font-size: 1.2rem;">📞</span> CALL FOR PRICE
+                </a>
+                <a href="https://wa.me/916396811315" class="cta-button cta-whatsapp">
+                    <span style="font-size: 1.2rem;">💬</span> WHATSAPP QUOTE
+                </a>
+            </div>
+            
+            <p style="color: #10b981; font-weight: 700; margin-top: 1rem;">
+                Price: ₹225 - ₹310 / Kg • Min Order: 1000 Kg • GST 18%
+            </p>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2 class="section-title">WHY VARMAN METALS</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">ULTRA-HIGH PURITY</h3>
-                <p class="feature-description">
-                    99.99% pure zinc with minimal impurities. Consistent quality batch after batch, 
-                    meeting international standards for industrial applications.
-                </p>
+    <!-- Social Links Bar -->
+    <div class="social-bar">
+        <a href="https://www.linkedin.com/company/varman-metals/" target="_blank" class="social-btn btn-linkedin">
+            LinkedIn
+        </a>
+        <a href="https://jsdl.in/DT-99KX9D15NDP" target="_blank" class="social-btn btn-justdial">
+            Justdial
+        </a>
+        <a href="https://www.indiamart.com/company/3395644/" target="_blank" class="social-btn btn-indiamart">
+            IndiaMART
+        </a>
+        <a href="https://akii.com/brands/varmanmetals.in" target="_blank" class="social-btn" style="background: black; color: white;">
+            Akii
+        </a>
+        <a href="https://share.google.com" target="_blank" class="social-btn" style="background: white; color: #4285f4; border: 2px solid #4285f4;">
+            Google
+        </a>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-grid">
+        <div class="product-card">
+            <div class="product-name">SHG Zinc Ingots</div>
+            <div style="font-size: 0.9rem; color: var(--ingot-silver); margin-bottom: 1rem;">
+                99.995% Purity • Special High Grade
+            </div>
+            <div class="product-price">₹280-310/Kg</div>
+            <div style="font-size: 0.8rem; color: #94a3b8;">
+                HSN: 790111 • Min Order: 1 MT
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-name">High Grade Zinc</div>
+            <div style="font-size: 0.9rem; color: var(--ingot-silver); margin-bottom: 1rem;">
+                99.99% Purity • Galvanizing Grade
+            </div>
+            <div class="product-price">₹250-280/Kg</div>
+            <div style="font-size: 0.8rem; color: #94a3b8;">
+                For Industrial Applications
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-name">Zinc Alloys (Zamak)</div>
+            <div style="font-size: 0.9rem; color: var(--ingot-silver); margin-bottom: 1rem;">
+                Zamak 3 • Zamak 5 • Die Casting
+            </div>
+            <div class="product-price">₹265-295/Kg</div>
+            <div style="font-size: 0.8rem; color: #94a3b8;">
+                Automotive • Hardware • Electronics
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-name">Remelted Zinc</div>
+            <div style="font-size: 0.9rem; color: var(--ingot-silver); margin-bottom: 1rem;">
+                Secondary Zinc • Cost Effective
+            </div>
+            <div class="product-price">₹225-250/Kg</div>
+            <div style="font-size: 0.8rem; color: #94a3b8;">
+                For General Industrial Use
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities We Serve -->
+    <section class="cities-section">
+        <h2 class="section-title">PAN INDIA SUPPLY NETWORK</h2>
+        <div class="cities-grid">
+            <span class="city-tag">Jamnagar</span>
+            <span class="city-tag">Ludhiana</span>
+            <span class="city-tag">Mumbai</span>
+            <span class="city-tag">Meerut</span>
+            <span class="city-tag">Moradabad</span>
+            <span class="city-tag">Secunderabad</span>
+            <span class="city-tag">Ahmedabad</span>
+            <span class="city-tag">Nagpur</span>
+            <span class="city-tag">Rajkot</span>
+            <span class="city-tag">Aligarh</span>
+            <span class="city-tag">Pune</span>
+            <span class="city-tag">New Delhi</span>
+            <span class="city-tag">Bhiwandi</span>
+            <span class="city-tag">Kolkata</span>
+            <span class="city-tag" style="background: var(--safety-yellow); color: black; font-weight: 900;">PAN INDIA</span>
+        </div>
+    </section>
+
+    <!-- Capacity Stats -->
+    <section style="padding: 4rem 2rem; background: var(--industrial-gray); text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+            <div>
+                <div style="font-size: 2.5rem; color: var(--safety-yellow); font-weight: 900;">200 MT</div>
+                <div style="color: var(--ingot-silver);">Monthly Capacity</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; color: #10b981; font-weight: 900;">24 HOURS</div>
+                <div style="color: var(--ingot-silver);">Dispatch Guarantee</div>
+            </div>
+            <div>
+                <div style="font-size: 2.5rem; color: #3b82f6; font-weight: 900;">99.995%</div>
+                <div style="color: var(--ingot-silver);">Maximum Purity</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section style="padding: 4rem 2rem; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 3rem; color: var(--safety-yellow);">WHY VARMAN METALS</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+            <div style="margin-bottom: 2rem; padding: 1rem; border-left: 4px solid var(--safety-yellow);">
+                <h3 style="color: var(--safety-yellow); margin-bottom: 0.5rem;">✅ Lab Verified Quality</h3>
+                <p>Every batch tested with spectrochemical analysis. Verified reports for 99.9%+ purity provided with dispatch.</p>
             </div>
             
-            <div class="feature-card">
-                <div class="feature-icon">🌱</div>
-                <h3 class="feature-title">SUSTAINABLE PRODUCTION</h3>
-                <p class="feature-description">
-                    Carbon-negative manufacturing process. Our production exceeds environmental 
-                    standards while delivering superior quality.
-                </p>
+            <div style="margin-bottom: 2rem; padding: 1rem; border-left: 4px solid #10b981;">
+                <h3 style="color: #10b981; margin-bottom: 0.5rem;">🚚 PAN India Delivery</h3>
+                <p>Reliable logistics network serving industrial hubs across India with competitive freight rates.</p>
             </div>
             
-            <div class="feature-card">
-                <div class="feature-icon">🚚</div>
-                <h3 class="feature-title">GLOBAL LOGISTICS</h3>
-                <p class="feature-description">
-                    Reliable worldwide shipping with competitive delivery times. 
-                    Bulk orders and custom packaging available.
-                </p>
+            <div style="margin-bottom: 2rem; padding: 1rem; border-left: 4px solid #3b82f6;">
+                <h3 style="color: #3b82f6; margin-bottom: 0.5rem;">📋 HSN Code 7901 Compliant</h3>
+                <p>Proper GST documentation and HSN classification for all zinc products including unwrought zinc.</p>
             </div>
+        </div>
+        
+        <div class="cta-buttons" style="margin-top: 3rem;">
+            <a href="tel:+916396811315" class="cta-button cta-call" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
+                <span style="font-size: 1.2rem;">📞</span> CALL: +91 6396811315
+            </a>
         </div>
     </section>
 
     <!-- Performance Badge -->
     <div class="performance-badge">
-        <span class="badge-icon">⚡</span>
+        <span>⚡</span>
         <span>100% SUSTAINABLE / 100ms SPEED</span>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <img src="LOGO.webp" alt="Varman Metals Logo" class="footer-logo">
-            <p class="footer-text">
-                VARMAN METALS | INDUSTRIAL ZINC INGOTS & ALLOYS
-            </p>
-            <p class="footer-text">
-                Specializing in high-purity zinc products for galvanizing, die-casting, and industrial applications.
-            </p>
-            <div class="footer-contact">
-                <p>📞 +91 98765 43210 | 📧 contact@varmanmetals.in</p>
-                <p>📍 Industrial Estate, Metal Park, India</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Search Panel -->
-    <div class="search-panel" id="searchPanel">
-        <div class="close-search" id="closeSearch">×</div>
-        <input type="text" class="search-input" placeholder="Search products, specifications, pricing...">
-        <p style="color: var(--ingot-silver); margin-top: 1rem;">
-            Try: "zinc ingot price" or "galvanizing zinc specifications"
-        </p>
-    </div>
-
     <script>
-        // Search functionality
-        const searchToggle = document.getElementById('searchToggle');
-        const searchPanel = document.getElementById('searchPanel');
-        const closeSearch = document.getElementById('closeSearch');
-        const searchInput = document.querySelector('.search-input');
-        
-        searchToggle.addEventListener('click', () => {
-            searchPanel.classList.add('active');
-            searchInput.focus();
-        });
-        
-        closeSearch.addEventListener('click', () => {
-            searchPanel.classList.remove('active');
-        });
-        
-        // Close search panel on ESC key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                searchPanel.classList.remove('active');
-            }
-        });
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+        // Minimal JavaScript for interactions
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Animation on click
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
             });
         });
         
-        // Animate feature cards on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-        
+        // Simple scroll animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -529,14 +584,14 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, observerOptions);
+        });
         
-        // Apply animation to feature cards
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
+        // Observe elements for fade-in
+        document.querySelectorAll('.product-card, .city-tag').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(el);
         });
     </script>
 </body>
