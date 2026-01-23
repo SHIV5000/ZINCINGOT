@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Varman Metals | Zinc Ingots Supplier | Phone: +91 6396811315 | Email: info@varmanmetals.in</title>
+    <meta name="description" content="Contact Varman Metals for premium Zinc Ingots. Call +91 6396811315, email info@varmanmetals.in. Industrial Zinc supplier for die casting, galvanizing across India.">
+    <meta name="keywords" content="Contact Zinc Supplier, Zinc Ingots Contact, Zinc Manufacturer India, Industrial Zinc Contact, Zinc Sales Contact">
+    <link rel="canonical" href="https://varmanmetals.in/contact.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Varman Metals | Zinc Ingots Supplier">
+    <meta property="og:description" content="Get in touch with Varman Metals for premium Zinc Ingots. Contact us via phone, email, or WhatsApp for quotes and inquiries.">
+    <meta property="og:image" content="https://varmanmetals.in/images/contact-banner.webp">
+    <meta property="og:url" content="https://varmanmetals.in/contact.html">
+    
+    <!-- Schema.org for Contact Page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Varman Metals",
+        "description": "Contact page for Varman Metals - Premium Zinc Ingots Supplier",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Varman Metals",
+            "telephone": "+91-6396811315",
+            "email": "info@varmanmetals.in",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Jail Chungi",
+                "addressLocality": "Meerut",
+                "addressRegion": "Uttar Pradesh",
+                "postalCode": "250001",
+                "addressCountry": "IN"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Same CSS as index.html -->
+    <style>
+        /* Same CSS as index.html - maintain same styling */
+        :root {
+            --carbon-black: #000000;
+            --ingot-silver: #c0c0c0;
+            --safety-yellow: #ffff00;
+            --industrial-gray: #1a1a1a;
+            --text-light: #f0f0f0;
+            --blue-accent: #1e40af;
+            --green-accent: #10b981;
+            --whatsapp-green: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--carbon-black);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header - Same as index */
+        .header {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 0.8rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--ingot-silver);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--safety-yellow);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.3rem;
+            z-index: 1001;
+        }
+        
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--safety-yellow);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-grow: 1;
+        }
+        
+        /* Mobile Menu - Same as index */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 999;
+            padding: 5rem 1.5rem 2rem;
+            transition: left 0.3s ease;
+            border-right: 2px solid var(--safety-yellow);
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .mobile-nav-link {
+            color: var(--ingot-silver);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.8rem;
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--safety-yellow);
+            border-left-color: var(--safety-yellow);
+            background: rgba(255, 255, 0, 0.1);
+        }
+        
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 998;
+            display: none;
+        }
+        
+        .menu-overlay.active {
+            display: block;
+        }
+        
+        /* Desktop Nav */
+        @media (min-width: 768px) {
+            .menu-toggle {
+                display: none;
+            }
+            
+            .header {
+                justify-content: space-between;
+                padding: 1rem 2rem;
+            }
+            
+            .desktop-nav {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+            }
+            
+            .desktop-nav-link {
+                color: var(--ingot-silver);
+                text-decoration: none;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+                transition: color 0.3s;
+            }
+            
+            .desktop-nav-link:hover,
+            .desktop-nav-link.active {
+                color: var(--safety-yellow);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .desktop-nav {
+                display: none;
+            }
+        }
+        
+        /* Contact Hero Section */
+        .contact-hero {
+            min-height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 8rem 1.5rem 3rem;
+            text-align: center;
+        }
+        
+        .contact-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('INGOTS.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.45;
+            z-index: -1;
+        }
+        
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--safety-yellow);
+            text-transform: uppercase;
+        }
+        
+        /* Contact Content */
+        .contact-content {
+            padding: 3rem 1.5rem;
+            background: var(--industrial-gray);
+        }
+        
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-heading {
+            color: var(--safety-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--safety-yellow);
+        }
+        
+        /* Contact Methods Grid */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 0, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .contact-card:hover {
+            border-color: var(--safety-yellow);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--safety-yellow);
+        }
+        
+        .contact-method-title {
+            color: var(--safety-yellow);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .contact-detail {
+            color: var(--ingot-silver);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background: var(--safety-yellow);
+            color: var(--carbon-black);
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-button:hover {
+            background: #e6e600;
+            transform: translateY(-2px);
+        }
+        
+        /* Business Hours */
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .hours-card {
+            background: rgba(255, 255, 0, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .hours-title {
+            color: var(--safety-yellow);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Location Map */
+        .location-section {
+            margin-top: 3rem;
+        }
+        
+        .location-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+        
+        .address-details {
+            color: var(--ingot-silver);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer - Same as index */
+        .footer {
+            background: var(--industrial-gray);
+            padding: 3rem 1.5rem;
+            border-top: 2px solid var(--safety-yellow);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            color: var(--safety-yellow);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 2rem 0;
+        }
+        
+        .social-link {
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .social-linkedin {
+            background: #0077b5;
+            color: white;
+        }
+        
+        .social-justdial {
+            background: white;
+            color: #ff6a00;
+            border: 2px solid #ff6a00;
+        }
+        
+        .social-indiamart {
+            background: linear-gradient(to right, #2e3192, #1b1464);
+            color: white;
+        }
+        
+        .social-akii {
+            background: black;
+            color: white;
+        }
+        
+        .social-google {
+            background: #4285f4;
+            color: white;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            color: var(--ingot-silver);
+            font-size: 0.9rem;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+        }
+        
+        /* WhatsApp Button - Same as index */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #1DA851;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 767px) {
+            .contact-hero {
+                padding: 6rem 1rem 2rem;
+            }
+            
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">HOME</a>
+            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
+            <a href="contact.html" class="mobile-nav-link active">CONTACT</a>
+            <a href="tel:+916396811315" class="mobile-nav-link" style="color: var(--safety-yellow);">
+                📞 CALL: +91 6396811315
+            </a>
+            <a href="https://wa.me/916396811315" class="mobile-nav-link" style="color: #25D366;">
+                💬 WHATSAPP QUOTE
+            </a>
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+        
+        <img src="LOGO.webp" alt="Varman Metals Logo" class="logo">
+        <div class="company-name">VARMAN METALS</div>
+        
+        <nav class="desktop-nav">
+            <a href="index.html" class="desktop-nav-link">HOME</a>
+            <a href="about.html" class="desktop-nav-link">ABOUT</a>
+            <a href="contact.html" class="desktop-nav-link active">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-background"></div>
+        <div class="contact-container">
+            <h1 class="contact-title">CONTACT VARMAN METALS</h1>
+            <p style="font-size: 1.2rem; color: var(--ingot-silver); max-width: 800px; margin: 0 auto;">
+                Get in touch for premium Zinc Ingots. We're here to serve your industrial zinc requirements across India.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-content">
+        <div class="contact-container">
+            <div class="contact-section">
+                <h2 class="section-heading">CONTACT METHODS</h2>
+                <p style="color: var(--ingot-silver); margin-bottom: 2rem; font-size: 1.1rem;">
+                    Choose your preferred method to contact us. We respond promptly to all inquiries.
+                </p>
+                
+                <div class="contact-methods">
+                    <!-- Phone Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-method-title">PHONE CALL</div>
+                        <div class="contact-detail">
+                            Direct line to our sales team. Fastest way to get pricing and technical specifications.
+                        </div>
+                        <div style="font-size: 1.5rem; font-weight: 900; color: var(--safety-yellow); margin: 1rem 0;">
+                            +91 6396811315
+                        </div>
+                        <a href="tel:+916396811315" class="contact-button">
+                            CALL NOW
+                        </a>
+                    </div>
+                    
+                    <!-- WhatsApp Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-method-title">WHATSAPP BUSINESS</div>
+                        <div class="contact-detail">
+                            Send us product inquiries, specifications, or request quotes directly via WhatsApp.
+                        </div>
+                        <div style="font-size: 1.5rem; font-weight: 900; color: #25D366; margin: 1rem 0;">
+                            +91 6396811315
+                        </div>
+                        <a href="https://wa.me/916396811315" class="contact-button" style="background: #25D366; color: white;">
+                            WHATSAPP NOW
+                        </a>
+                    </div>
+                    
+                    <!-- Email Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-method-title">EMAIL</div>
+                        <div class="contact-detail">
+                            For detailed inquiries, technical specifications, and official purchase orders.
+                        </div>
+                        <div style="font-size: 1.3rem; font-weight: 900; color: var(--safety-yellow); margin: 1rem 0; word-break: break-all;">
+                            info@varmanmetals.in
+                        </div>
+                        <a href="mailto:info@varmanmetals.in" class="contact-button">
+                            SEND EMAIL
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Business Hours -->
+            <div class="contact-section">
+                <h2 class="section-heading">BUSINESS HOURS</h2>
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <div class="hours-title">WORKING DAYS</div>
+                        <div style="color: var(--ingot-silver);">Monday - Saturday</div>
+                    </div>
+                    <div class="hours-card">
+                        <div class="hours-title">BUSINESS HOURS</div>
+                        <div style="color: var(--ingot-silver);">9:00 AM - 7:00 PM</div>
+                    </div>
+                    <div class="hours-card">
+                        <div class="hours-title">EMERGENCY SUPPORT</div>
+                        <div style="color: var(--ingot-silver);">24/7 for existing clients</div>
+                    </div>
+                    <div class="hours-card">
+                        <div class="hours-title">RESPONSE TIME</div>
+                        <div style="color: var(--ingot-silver);">Within 30 minutes during business hours</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Office Location -->
+            <div class="contact-section">
+                <h2 class="section-heading">OFFICE LOCATION</h2>
+                <div class="location-card">
+                    <div class="contact-method-title" style="text-align: left; margin-bottom: 1.5rem;">📍 REGISTERED OFFICE</div>
+                    <div class="address-details">
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Varman Metals</strong><br>
+                            Jail Chungi, Meerut<br>
+                            Uttar Pradesh - 250001<br>
+                            India
+                        </div>
+                        <div>
+                            <strong>Landmark:</strong> Near Jail Chungi Chowk<br>
+                            <strong>City:</strong> Meerut, Uttar Pradesh<br>
+                            <strong>PIN Code:</strong> 250001
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <div class="contact-method-title" style="text-align: left; margin-bottom: 1rem;">📋 IMPORTANT NOTES</div>
+                        <ul style="color: var(--ingot-silver); padding-left: 1.5rem;">
+                            <li style="margin-bottom: 0.8rem;">For official orders, please use company email IDs only</li>
+                            <li style="margin-bottom: 0.8rem;">Purchase Orders must be sent to info@varmanmetals.in</li>
+                            <li style="margin-bottom: 0.8rem;">All rates are exclusive of GST 18%</li>
+                            <li>Minimum Order Quantity: 1000 Kg (1 Metric Ton)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Response Notice -->
+            <div style="background: rgba(255, 255, 0, 0.1); padding: 2rem; border-radius: 10px; margin-top: 3rem; text-align: center;">
+                <div style="color: var(--safety-yellow); font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">
+                    ⚡ QUICK RESPONSE GUARANTEE
+                </div>
+                <div style="color: var(--ingot-silver);">
+                    We guarantee a response within 30 minutes during business hours for all Zinc Ingot inquiries, 
+                    pricing requests, and technical specifications. For emergency requirements, call our direct line.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="LOGO.webp" alt="Varman Metals Logo" class="footer-logo">
+            <h2 class="footer-title">CONNECT WITH US</h2>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/varman-metals/" target="_blank" class="social-link social-linkedin">
+                    LinkedIn
+                </a>
+                <a href="https://jsdl.in/DT-99KX9D15NDP" target="_blank" class="social-link social-justdial">
+                    Justdial
+                </a>
+                <a href="https://www.indiamart.com/company/3395644/" target="_blank" class="social-link social-indiamart">
+                    IndiaMART
+                </a>
+                <a href="https://akii.com/brands/varmanmetals.in" target="_blank" class="social-link social-akii">
+                    Akii
+                </a>
+                <a href="https://www.google.com/search?q=Varman+Metals" target="_blank" class="social-link social-google">
+                    Google
+                </a>
+            </div>
+            
+            <div class="contact-info">
+                <div style="margin-bottom: 0.5rem;">
+                    <strong>📞 Phone:</strong> +91 6396811315
+                </div>
+                <div style="margin-bottom: 0.5rem;">
+                    <strong>📧 Email:</strong> info@varmanmetals.in
+                </div>
+                <div>
+                    <strong>📍 Location:</strong> Jail Chungi, Meerut, Uttar Pradesh
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © 2024 Varman Metals. Premium Zinc Ingots Supplier & Manufacturer.<br>
+                All rates exclusive of GST 18%. Official email communication mandatory for orders.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/916396811315" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <div class="whatsapp-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24" fill="white">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+            Chat on WhatsApp
+        </div>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking on links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
