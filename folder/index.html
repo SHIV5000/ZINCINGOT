@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Varman Metals | Zinc Ingot Supplier PAN India | SHG 99.995% & High Grade</title>
+    <meta name="description" content="Varman Metals supplies premium Zinc Ingots (High Grade, SHG 99.995%, Pure Zinc 99.99%, PMI Verified) and Zamak Alloys. Serving Jamnagar, Ludhiana, Mumbai, Meerut. 200 MT Capacity.">
+    <meta name="keywords" content="Zinc Ingots, SHG Zinc, High Grade Zinc, Zamak 3, Zamak 5, Zinc for Galvanizing, Zinc Price per kg, HSN 7901, Zinc Supplier India">
+    <link rel="canonical" href="https://varmanmetals.in/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "IndustrialSupplyStore",
+        "name": "Varman Metals",
+        "description": "Premium supplier of Zinc Ingots including High Grade, SHG 99.995%, Pure Zinc 99.99%, and Zinc Alloys.",
+        "url": "https://varmanmetals.in/",
+        "brand": { "@type": "Brand", "name": "Varman Metals" },
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Special High Grade Zinc (SHG)",
+                    "sku": "VM-ZI-SHG-9995",
+                    "image": "shz.webp",
+                    "description": "99.995% Purity Zinc Ingots for Die Casting"
+                },
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "priceCurrency": "INR",
+                    "price": "225-310",
+                    "unitCode": "KGM"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "High Grade Zinc (HG)",
+                    "sku": "VM-ZI-HG-9990",
+                    "image": "high.webp",
+                    "description": "Zinc Ingots optimized for Galvanizing"
+                }
+            }
+        ],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Meerut",
+            "addressRegion": "Uttar Pradesh",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-6396811315",
+            "contactType": "Sales"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red: #D93B3B;
+            --dark: #121212;
+            --white: #ffffff;
+            --mustard: #F2C029;
+            --teal: #2B9EB3;
+            --wood-dark: #5d4037;
+            --wood-light: #8d6e63;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 18px;
+            overflow-x: hidden;
+            padding-top: 75px; /* Space for fixed header */
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, .btn-text, .nav-link, .price-text { font-family: 'Teko', sans-serif; text-transform: uppercase; }
+        
+        h1 { font-size: 4rem; line-height: 0.9; font-weight: 700; color: var(--dark); margin-bottom: 20px; }
+        h2 { font-size: 3rem; font-weight: 600; margin-bottom: 20px; color: var(--dark); border-bottom: 5px solid var(--mustard); display: inline-block; }
+        h3 { font-size: 1.8rem; font-weight: 500; margin-bottom: 5px; }
+
+        /* --- HEADER --- */
+        .top-bar {
+            position: fixed; top: 0; left: 0; width: 100%; height: 75px;
+            background: var(--red);
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .brand { color: white; font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; font-family: 'Teko'; }
+        
+        /* Mobile Menu Icon (Hidden on Desktop) */
+        .mobile-menu-btn { display: none; color: white; font-size: 2rem; cursor: pointer; }
+
+        .nav-links { display: flex; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; font-size: 1.3rem; margin-left: 30px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--mustard); }
+
+        /* --- HANGING WOODEN PRICE PLATE --- */
+        .hanging-sign-container {
+            position: fixed;
+            top: 60px; /* Below the red bar top edge */
+            right: 5%; /* Align with right padding */
+            z-index: 999;
+            text-align: center;
+            /* Hide on very small screens to save space, or scale it */
+        }
+
+        .chains {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0 auto;
+            height: 25px;
+        }
+        
+        .chain-link {
+            width: 4px;
+            height: 100%;
+            background: repeating-linear-gradient(to bottom, #333 0, #333 4px, #777 4px, #777 6px);
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
+        }
+
+        .wood-plate {
+            background: linear-gradient(to bottom, var(--wood-dark), var(--wood-light), var(--wood-dark));
+            border: 3px solid #3e2723;
+            border-radius: 5px;
+            padding: 8px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            color: #fff;
+            transform: rotate(-2deg); /* Slight natural dangle */
+            animation: dangle 3s infinite ease-in-out;
+            border-top: 2px solid #a1887f; /* Highlight */
+        }
+
+        @keyframes dangle {
+            0% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+            100% { transform: rotate(-2deg); }
+        }
+
+        .price-label { font-size: 0.8rem; letter-spacing: 1px; color: var(--mustard); font-weight: bold; text-transform: uppercase; }
+        .price-val { font-family: 'Teko'; font-size: 1.8rem; line-height: 1; text-shadow: 1px 1px 0 #000; }
+
+        /* --- LAYOUT --- */
+        .section {
+            padding: 80px 5%;
+            min-height: 90vh;
+            display: flex; flex-direction: column; justify-content: center;
+            position: relative;
+        }
+        .bg-watermark {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0.1; z-index: -1; filter: grayscale(100%) contrast(120%);
+        }
+        #sec1 .bg-watermark { background-image: url('high.webp'); }
+        #sec2 .bg-watermark { background-image: url('shz.webp'); }
+
+        .content { max-width: 1300px; margin: 0 auto; width: 100%; }
+
+        /* --- HERO --- */
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+        .hero-box { 
+            background: rgba(255,255,255,0.95); padding: 40px; 
+            border-left: 8px solid var(--red); box-shadow: -10px 10px 0 rgba(0,0,0,0.1); 
+        }
+
+        /* --- PRODUCT CARDS (Using Images) --- */
+        .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .prod-card {
+            background: white; border: 1px solid #ddd;
+            transition: transform 0.3s; overflow: hidden;
+            display: flex; flex-direction: column;
+        }
+        .prod-card:hover { transform: translateY(-8px); border-color: var(--teal); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        .prod-img {
+            width: 100%; height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--mustard);
+        }
+        
+        .prod-info { padding: 25px; }
+
+        /* --- INDUSTRIAL HUB HIGHLIGHT --- */
+        .city-block {
+            background: var(--dark); color: white;
+            padding: 50px; margin-top: 60px;
+            position: relative;
+            /* Geometric cut */
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%, 0 90%);
+        }
+        .city-block::before {
+            content:''; position: absolute; top:0; left:0; width:100%; height:5px; background: var(--mustard);
+        }
+        
+        .city-tags { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 25px; }
+        .city { 
+            background: rgba(255,255,255,0.15); 
+            color: var(--mustard); 
+            padding: 8px 18px; 
+            font-size: 1.3rem; /* Larger Font */
+            font-weight: 700;
+            font-family: 'Teko'; 
+            letter-spacing: 1px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: background 0.2s;
+        }
+        .city:hover { background: var(--red); color: white; border-color: var(--red); }
+
+        /* --- CONTACT --- */
+        .btn-trap {
+            display: inline-block; background: var(--red); color: white;
+            padding: 15px 40px; font-size: 1.4rem; font-weight: 600; text-decoration: none;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); transition: 0.2s;
+        }
+        .btn-trap:hover { background: var(--dark); }
+
+        .whatsapp-btn-large {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: #25D366; color: white; width: 100%;
+            padding: 15px; font-size: 1.5rem; font-family: 'Teko'; font-weight: 600;
+            text-decoration: none; margin-top: 20px;
+            border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .whatsapp-btn-large:hover { background: #1ebe57; }
+
+        /* --- MOBILE ADAPTIVE --- */
+        @media (max-width: 900px) {
+            .top-bar { padding: 0 20px; height: 65px; }
+            .brand { font-size: 1.8rem; }
+            .nav-links { display: none; } /* Hide regular nav on mobile */
+            
+            /* Mobile adjustments for hanging price */
+            .hanging-sign-container { top: 55px; right: 20px; transform: scale(0.8); transform-origin: top right; }
+            
+            h1 { font-size: 2.8rem; }
+            .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+            .city-block { padding: 30px; clip-path: none; }
+            .city { font-size: 1.1rem; padding: 5px 12px; }
+            
+            .section { padding: 80px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hanging-sign-container">
+        <div class="chains">
+            <div class="chain-link"></div>
+            <div class="chain-link"></div>
+        </div>
+        <div class="wood-plate">
+            <div class="price-label">Today's Price</div>
+            <div class="price-val">₹225 - ₹310 / Kg</div>
+        </div>
+    </div>
+
+    <header class="top-bar">
+        <div class="brand">VARMAN METALS</div>
+        <nav class="nav-links">
+            <a href="#sec1">Zinc</a>
+            <a href="#sec2">Specs</a>
+            <a href="#sec3">Contact</a>
+        </nav>
+    </header>
+
+    <section id="sec1" class="section">
+        <div class="bg-watermark"></div> <div class="content">
+            <div class="hero-grid">
+                <div class="hero-box">
+                    <span style="background:var(--teal); color:white; padding:5px 10px; font-weight:bold; font-size:0.9rem;">INDUSTRIAL SUPPLY</span>
+                    <h1>PREMIUM<br>ZINC INGOTS</h1>
+                    <p style="font-size:1.2rem;">
+                        We supply <strong>High Grade</strong>, <strong>SHG 99.995%</strong>, and <strong>Pure Zinc 99.99%</strong>. Verified lab quality for galvanizing and die-casting across PAN India.
+                    </p>
+                    <div style="margin-top:20px; border-top:1px solid #ccc; padding-top:10px;">
+                        <strong style="color:var(--red);">200 MT</strong> Monthly Capacity | <strong style="color:var(--red);">24 HR</strong> Dispatch
+                    </div>
+                    <a href="#sec3" class="btn-trap" style="margin-top:20px;">GET QUOTE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec2" class="section">
+        <div class="bg-watermark"></div> <div class="content">
+            <h2>PRODUCT SPECTRUM</h2>
+            
+            <div class="prod-grid">
+                <div class="prod-card">
+                    <img src="shz.webp" alt="SHG Zinc 99.995%" class="prod-img">
+                    <div class="prod-info">
+                        <h3 style="color:var(--red);">SHG Zinc (99.995%)</h3>
+                        <p>Special High Grade. Ultra-pure for precision die-casting. Lab Verified.</p>
+                        <div style="font-size:0.9rem; font-weight:700; color:#777;">HSN: 790111</div>
+                    </div>
+                </div>
+
+                <div class="prod-card">
+                    <img src="high.webp" alt="High Grade Zinc" class="prod-img">
+                    <div class="prod-info">
+                        <h3 style="color:var(--red);">High Grade (HG)</h3>
+                        <p>Optimized for Galvanizing industry. Excellent coating consistency.</p>
+                        <div style="font-size:0.9rem; font-weight:700; color:#777;">HSN: 790112</div>
+                    </div>
+                </div>
+
+                <div class="prod-card">
+                    <img src="remelted.webp" alt="Zamak Alloys" class="prod-img">
+                    <div class="prod-info">
+                        <h3 style="color:var(--red);">Zamak & Alloys</h3>
+                        <p><strong>Zamak 3 & 5</strong>. Zinc Alloy Ingots for high strength applications.</p>
+                        <div style="font-size:0.9rem; font-weight:700; color:#777;">READY STOCK</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="city-block">
+                <h3 style="color:white; margin:0; font-size:2.5rem;">INDUSTRIAL HUBS COVERED</h3>
+                <p style="color:rgba(255,255,255,0.7);">Reliable Logistics & Transport to Major Zones:</p>
+                <div class="city-tags">
+                    <span class="city">JAMNAGAR</span>
+                    <span class="city">LUDHIANA</span>
+                    <span class="city">MUMBAI</span>
+                    <span class="city">MEERUT</span>
+                    <span class="city">MORADABAD</span>
+                    <span class="city">SECUNDERABAD</span>
+                    <span class="city">AHMEDABAD</span>
+                    <span class="city">NAGPUR</span>
+                    <span class="city">RAJKOT</span>
+                    <span class="city">PUNE</span>
+                    <span class="city">KOLKATA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec3" class="section">
+        <div class="bg-watermark"></div> <div class="content">
+            <h2>ORDER & CONTACT</h2>
+            
+            <div class="hero-grid">
+                <div style="background:white; padding:40px; border:2px solid var(--red);">
+                    <div style="margin-bottom:30px; text-align:center;">
+                        <div style="font-size:1rem; font-weight:700; color:#888;">WHATSAPP / CALL</div>
+                        <a href="https://wa.me/916396811315" class="whatsapp-btn-large">
+                            <span>✆ Chat on WhatsApp</span>
+                        </a>
+                    </div>
+                    
+                    <div style="margin-bottom:20px; text-align:center;">
+                        <div style="font-size:1rem; font-weight:700; color:#888;">EMAIL PO</div>
+                        <div style="font-family:'Teko'; font-size:2rem; line-height:1;">info@varmanmetals.in</div>
+                    </div>
+
+                    <div style="text-align:center; padding-top:20px; border-top:1px solid #eee;">
+                        <p style="margin:0;">Jail Chungi, Meerut, Uttar Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>4-STEP PROCESS</h3>
+                    <ol style="padding-left:20px; font-weight:600; font-size:1.1rem; color:#444;">
+                        <li style="margin-bottom:15px;"><strong>RATE LOCK:</strong> Finalize daily rates.</li>
+                        <li style="margin-bottom:15px;"><strong>OFFICIAL PO:</strong> Send via Email.</li>
+                        <li style="margin-bottom:15px;"><strong>INVOICE:</strong> Generated with 18% GST.</li>
+                        <li style="margin-bottom:15px;"><strong>DISPATCH:</strong> Loose or Gunny Bags (25KG).</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <footer style="margin-top:80px; text-align:center; font-size:0.9rem; opacity:0.6; border-top:1px solid #ccc; padding-top:20px;">
+                © 2026 Varman Metals. Zinc Ingot Manufacturer. | HSN: 7901
+            </footer>
+        </div>
+    </section>
+
+</body>
+</html>
