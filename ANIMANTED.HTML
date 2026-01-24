@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Varman Metals | Zinc Ingot Supplier PAN India | SHG 99.995% & High Grade</title>
+    <meta name="description" content="Varman Metals supplies premium Zinc Ingots (High Grade, SHG 99.995%, Pure Zinc 99.99%, PMI Verified) and Zamak Alloys. Serving Jamnagar, Ludhiana, Mumbai, Meerut. 200 MT Capacity.">
+    <meta name="keywords" content="Zinc Ingots, SHG Zinc, High Grade Zinc, Zamak 3, Zamak 5, Zinc for Galvanizing, Zinc Price per kg, HSN 7901">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red: #D93B3B;
+            --dark: #121212;
+            --white: #ffffff;
+            --mustard: #F2C029;
+            --teal: #2B9EB3;
+            --border: #cccccc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--dark);
+            line-height: 1.5;
+            font-size: 19px;
+            overflow-x: hidden;
+        }
+
+        /* --- GEOMETRIC SHAPES & UTILS --- */
+        .shape-trapezoid { clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
+        .shape-inv-trapezoid { clip-path: polygon(5% 0, 95% 0, 100% 100%, 0% 100%); }
+        .shape-slant-right { clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        
+        /* TYPOGRAPHY */
+        h1, h2, h3, .btn-text, .nav-link { font-family: 'Teko', sans-serif; text-transform: uppercase; }
+        
+        h1 { font-size: 4.5rem; line-height: 0.9; font-weight: 700; color: var(--dark); }
+        h2 { font-size: 3rem; font-weight: 600; margin-bottom: 20px; color: var(--dark); border-bottom: 4px solid var(--mustard); display: inline-block; }
+        h3 { font-size: 1.8rem; font-weight: 500; margin-bottom: 5px; }
+
+        /* --- HEADER (Trapezoidal) --- */
+        .top-bar {
+            position: fixed; top: 0; left: 0; width: 100%; height: 75px;
+            background: var(--red);
+            z-index: 1000;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Slight Slant */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .brand { color: white; font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; font-family: 'Teko'; }
+        .nav-links a { color: white; text-decoration: none; font-size: 1.3rem; margin-left: 30px; font-weight: 500; }
+
+        /* --- SECTIONS --- */
+        .section {
+            position: relative;
+            padding: 120px 5% 80px 5%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Background Images */
+        .bg-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0.1; z-index: 0; filter: grayscale(100%);
+        }
+        #sec1 .bg-img { background-image: url('high.webp'); }
+        #sec2 .bg-img { background-image: url('shz.webp'); }
+        #sec3 .bg-img { background-image: url('remelted.webp'); }
+
+        .content { position: relative; z-index: 10; max-width: 1300px; margin: 0 auto; width: 100%; }
+
+        /* --- HERO BLOCKS (Rectangles & Squares) --- */
+        .hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center; }
+        
+        .hero-text-box {
+            background: rgba(255,255,255,0.95);
+            padding: 50px;
+            border-left: 10px solid var(--red);
+            box-shadow: -10px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        .stat-square {
+            background: var(--dark); color: white;
+            aspect-ratio: 1 / 1; /* Perfect Square */
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid var(--mustard);
+        }
+
+        /* --- PRODUCT GRID (Squares) --- */
+        .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        
+        .prod-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        /* Top Right Triangle Corner */
+        .prod-card::after {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 0; height: 0;
+            border-style: solid; border-width: 0 50px 50px 0;
+            border-color: transparent var(--teal) transparent transparent;
+        }
+        .prod-card:hover { transform: translateY(-10px); border-color: var(--red); }
+
+        /* --- TRAPEZOID BUTTON --- */
+        .btn-trap {
+            display: inline-block;
+            background: var(--red); color: white;
+            padding: 15px 50px;
+            text-decoration: none; font-size: 1.4rem; font-weight: 600;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            margin-top: 20px; transition: background 0.2s;
+        }
+        .btn-trap:hover { background: var(--dark); }
+
+        /* --- CITIES STRIP (Rectangle) --- */
+        .city-strip {
+            background: var(--dark); color: white;
+            padding: 40px; margin-top: 60px;
+            border-bottom: 5px solid var(--mustard);
+        }
+        .city-tags { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
+        .city { background: rgba(255,255,255,0.1); padding: 5px 15px; font-size: 0.9rem; }
+
+        /* --- CONTACT GRID --- */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 40px; border: 2px solid var(--dark); }
+        .contact-cell { padding: 40px; border-right: 1px solid #ddd; background: white; }
+        .contact-cell:last-child { background: var(--mustard); border-right: none; }
+
+        /* --- MOBILE --- */
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .stat-square { aspect-ratio: auto; padding: 40px; }
+            h1 { font-size: 3rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="brand">VARMAN METALS</div>
+        <nav class="nav-links">
+            <a href="#sec1">Zinc</a>
+            <a href="#sec2">Specs</a>
+            <a href="#sec3">Contact</a>
+        </nav>
+    </header>
+
+    <section id="sec1" class="section">
+        <div class="bg-img"></div>
+        <div class="content">
+            <div class="hero-grid">
+                <div class="hero-text-box">
+                    <span style="background:var(--teal); color:white; padding:5px 10px; font-weight:bold; font-size:0.9rem;">INDUSTRIAL SUPPLY</span>
+                    <h1>PREMIUM<br>ZINC INGOTS</h1>
+                    <p style="font-size:1.2rem;">
+                        Varman Metals manufactures <strong>High Grade</strong>, <strong>SHG 99.995%</strong>, and <strong>Pure Zinc 99.99%</strong>. 
+                        Verified lab quality for galvanizing and die-casting across PAN India.
+                    </p>
+                    <a href="#sec3" class="btn-trap">GET QUOTE</a>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                    <div class="stat-square">
+                        <div style="font-size:3.5rem; font-family:'Teko'; line-height:1; color:var(--mustard);">99.99%</div>
+                        <div style="font-size:0.9rem; text-transform:uppercase;">Pure Zinc</div>
+                    </div>
+                    <div class="stat-square">
+                        <div style="font-size:3.5rem; font-family:'Teko'; line-height:1; color:var(--mustard);">200 MT</div>
+                        <div style="font-size:0.9rem; text-transform:uppercase;">Monthly Cap</div>
+                    </div>
+                    <div class="stat-square">
+                        <div style="font-size:3.5rem; font-family:'Teko'; line-height:1; color:var(--mustard);">SHG</div>
+                        <div style="font-size:0.9rem; text-transform:uppercase;">Special Grade</div>
+                    </div>
+                    <div class="stat-square">
+                        <div style="font-size:3.5rem; font-family:'Teko'; line-height:1; color:var(--mustard);">24HR</div>
+                        <div style="font-size:0.9rem; text-transform:uppercase;">Dispatch</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec2" class="section">
+        <div class="bg-img"></div>
+        <div class="content">
+            <h2>PRODUCT SPECTRUM</h2>
+            
+            <div class="prod-grid">
+                <div class="prod-card">
+                    <h3 style="color:var(--red);">SHG Zinc (99.995%)</h3>
+                    <p>Special High Grade. Ultra-pure for precision die-casting applications.</p>
+                    <div style="margin-top:20px; font-weight:700; font-size:0.9rem;">HSN CODE: 790111</div>
+                </div>
+
+                <div class="prod-card">
+                    <h3 style="color:var(--red);">Pure Zinc (99.99%)</h3>
+                    <p>Standard industrial purity. Lab verified reports provided on demand.</p>
+                    <div style="margin-top:20px; font-weight:700; font-size:0.9rem;">HSN CODE: 7901</div>
+                </div>
+
+                <div class="prod-card">
+                    <h3 style="color:var(--red);">High Grade (HG)</h3>
+                    <p>Optimized for Galvanizing. Excellent fluidity and coating consistency.</p>
+                    <div style="margin-top:20px; font-weight:700; font-size:0.9rem;">HSN CODE: 790112</div>
+                </div>
+
+                <div class="prod-card">
+                    <h3 style="color:var(--red);">Zamak Alloys</h3>
+                    <p><strong>Zamak 3 & 5</strong>. Zinc Alloy Ingots for high strength die-casting.</p>
+                    <div style="margin-top:20px; font-weight:700; font-size:0.9rem;">READY STOCK</div>
+                </div>
+            </div>
+
+            <div class="city-strip">
+                <h3 style="color:white; margin:0;">INDUSTRIAL HUBS COVERED</h3>
+                <div class="city-tags">
+                    <span class="city">Jamnagar</span>
+                    <span class="city">Ludhiana</span>
+                    <span class="city">Mumbai</span>
+                    <span class="city">Meerut</span>
+                    <span class="city">Moradabad</span>
+                    <span class="city">Secunderabad</span>
+                    <span class="city">Ahmedabad</span>
+                    <span class="city">Nagpur</span>
+                    <span class="city">Rajkot</span>
+                    <span class="city">Pune</span>
+                    <span class="city">Kolkata</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec3" class="section">
+        <div class="bg-img"></div>
+        <div class="content">
+            <h2>ORDER PROCESS</h2>
+            
+            <div class="hero-grid">
+                <div>
+                    <ol style="padding-left:20px; font-weight:600; color:#555;">
+                        <li style="margin-bottom:15px;"><strong>RATE LOCK:</strong> Finalize daily rates via Call/WhatsApp.</li>
+                        <li style="margin-bottom:15px;"><strong>OFFICIAL PO:</strong> Send Purchase Order via Email.</li>
+                        <li style="margin-bottom:15px;"><strong>INVOICE:</strong> Generated with 18% GST Details.</li>
+                        <li style="margin-bottom:15px;"><strong>DISPATCH:</strong> Loaded in Loose or Gunny Bags (25KG).</li>
+                    </ol>
+                </div>
+
+                <div style="background:white; padding:40px; border:2px solid var(--red); position:relative;">
+                    <div style="position:absolute; top:-15px; left:50%; transform:translateX(-50%); background:var(--red); color:white; padding:5px 20px; font-weight:bold; font-family:'Teko'; font-size:1.2rem;">CONTACT DETAILS</div>
+                    
+                    <div style="text-align:center; margin-bottom:30px;">
+                        <div style="font-size:0.9rem; font-weight:700; color:#888;">WHATSAPP / CALL</div>
+                        <div style="font-family:'Teko'; font-size:2.5rem; line-height:1; color:var(--dark);">+91 63968 11315</div>
+                    </div>
+                    
+                    <div style="text-align:center;">
+                        <div style="font-size:0.9rem; font-weight:700; color:#888;">EMAIL PO</div>
+                        <div style="font-family:'Teko'; font-size:2rem; line-height:1; color:var(--dark);">info@varmanmetals.in</div>
+                    </div>
+                    
+                    <a href="https://wa.me/916396811315" class="btn-trap" style="width:100%; text-align:center; margin-top:30px;">START CHAT</a>
+                </div>
+            </div>
+            
+            <footer style="margin-top:80px; text-align:center; font-size:0.9rem; opacity:0.6; border-top:1px solid #ccc; padding-top:20px;">
+                © 2026 Varman Metals. Manufacturer & Supplier. | Price Range: ₹225 - ₹310 / Kg | HSN: 7901
+            </footer>
+        </div>
+    </section>
+
+</body>
+</html>
