@@ -95,6 +95,28 @@
         h2 { font-size: 3rem; font-weight: 600; margin-bottom: 20px; color: var(--dark); border-bottom: 5px solid var(--mustard); display: inline-block; }
         h3 { font-size: 1.8rem; font-weight: 500; margin-bottom: 5px; }
 
+        /* --- ZINC HIGHLIGHT EFFECT (GEOMETRICAL) --- */
+        .zinc-accent {
+            color: var(--red);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        /* The Geometrical Shape behind the text */
+        .zinc-accent::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: -5px;
+            width: 105%;
+            height: 12px;
+            background: rgba(217, 59, 59, 0.15); /* Light red geometric block */
+            z-index: -1;
+            transform: skewX(-20deg); /* Industrial Skew */
+            border-bottom: 2px solid var(--red);
+        }
+
         /* --- HEADER & NAVIGATION --- */
         .top-bar {
             position: fixed; top: 0; left: 0; width: 100%; height: 75px;
@@ -102,7 +124,6 @@
             z-index: 1000;
             display: flex; align-items: center; justify-content: space-between;
             padding: 0 5%;
-            /* REMOVED CLIP-PATH TO FIX DROPDOWN VISIBILITY */
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .brand { color: white; font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; font-family: 'Teko'; }
@@ -130,7 +151,7 @@
             background-color: var(--white);
             min-width: 220px;
             box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.3);
-            z-index: 2000; /* High Z-Index */
+            z-index: 2000;
             top: 100%; left: 0;
             margin-top: 0px; 
             border-top: 4px solid var(--mustard);
@@ -344,7 +365,15 @@
             .brand { font-size: 1.5rem; }
             .nav-links { display: none; } /* Hide regular nav */
             .mobile-controls { display: flex; } /* Show mobile controls */
-            .hanging-sign-container { display: none; } /* Hide sign on mobile */
+            
+            /* Show Price Sign on Mobile (Scaled Down) */
+            .hanging-sign-container { 
+                display: block; 
+                top: 55px; /* Hangs from behind the 65px header */
+                right: 10px; 
+                transform: scale(0.6); 
+                transform-origin: top right; 
+            } 
             
             h1 { font-size: 2.8rem; }
             .hero-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -422,9 +451,9 @@
             <div class="hero-grid">
                 <div class="hero-box">
                     <span style="background:var(--teal); color:white; padding:5px 10px; font-weight:bold; font-size:0.9rem;">INDUSTRIAL SUPPLY</span>
-                    <h1>PREMIUM<br>ZINC INGOTS</h1>
+                    <h1>PREMIUM<br><span class="zinc-accent">ZINC INGOTS</span></h1>
                     <p style="font-size:1.2rem;">
-                        We supply <strong>High Grade</strong>, <strong>SHG 99.995%</strong>, and <strong>Pure Zinc 99.99%</strong>. Verified lab quality for galvanizing and die-casting across PAN India.
+                        We supply <strong>High Grade</strong>, <strong>SHG 99.995%</strong>, and <strong>Pure 99.99% <span class="zinc-accent">Zinc Ingots</span></strong>. Verified lab quality for galvanizing and die-casting across PAN India.
                     </p>
                     <div style="margin-top:20px; border-top:1px solid #ccc; padding-top:10px;">
                         <strong style="color:var(--red);">200 MT</strong> Monthly Capacity | <strong style="color:var(--red);">24 HR</strong> Dispatch
@@ -443,7 +472,7 @@
                 <div class="prod-card">
                     <img src="shz.webp" alt="SHG Zinc 99.995%" class="prod-img">
                     <div class="prod-info">
-                        <h3 style="color:var(--red);">SHG Zinc (99.995%)</h3>
+                        <h3 class="zinc-accent">SHG 99.995% Zinc Ingots</h3>
                         <p>Special High Grade. Ultra-pure for precision die-casting. Lab Verified.</p>
                         <div style="font-size:0.9rem; font-weight:700; color:#777;">HSN: 790111</div>
                     </div>
@@ -452,8 +481,8 @@
                 <div class="prod-card">
                     <img src="high.webp" alt="High Grade Zinc" class="prod-img">
                     <div class="prod-info">
-                        <h3 style="color:var(--red);">High Grade (HG)</h3>
-                        <p>Optimized for Galvanizing industry. Excellent coating consistency.</p>
+                        <h3 class="zinc-accent">PMI Zinc Ingots</h3>
+                        <p>Optimized for Galvanizing industry. Excellent coating consistency. High Grade (PMI).</p>
                         <div style="font-size:0.9rem; font-weight:700; color:#777;">HSN: 790112</div>
                     </div>
                 </div>
@@ -461,7 +490,7 @@
                 <div class="prod-card">
                     <img src="remelted.webp" alt="Zamak Alloys" class="prod-img">
                     <div class="prod-info">
-                        <h3 style="color:var(--red);">Zamak & Alloys</h3>
+                        <h3 class="zinc-accent">Zamak & Alloys</h3>
                         <p><strong>Zamak 3 & 5</strong>. Zinc Alloy Ingots for high strength applications.</p>
                         <div style="font-size:0.9rem; font-weight:700; color:#777;">READY STOCK</div>
                     </div>
@@ -497,7 +526,7 @@
                     <div style="margin-bottom:30px; text-align:center;">
                         <div style="font-size:1rem; font-weight:700; color:#888;">WHATSAPP / CALL</div>
                         <a href="https://wa.me/916396811315" class="whatsapp-btn-large">
-                            <span>✆ Chat on WhatsApp</span>
+                            <span>✆ Quote on WhatsApp</span>
                         </a>
                     </div>
                     
@@ -525,9 +554,9 @@
                 </div>
 
                 <div>
-                    <h3>4-STEP PROCESS</h3>
+                    <h3>4-STEP PROCESS To Order</h3>
                     <ol style="padding-left:20px; font-weight:600; font-size:1.1rem; color:#444;">
-                        <li style="margin-bottom:15px;"><strong>RATE LOCK:</strong> Finalize daily rates.</li>
+                        <li style="margin-bottom:15px;"><strong>RATE LOCK:</strong> Call Us & Finalize rates.</li>
                         <li style="margin-bottom:15px;"><strong>OFFICIAL PO:</strong> Send via Email.</li>
                         <li style="margin-bottom:15px;"><strong>INVOICE:</strong> Generated with 18% GST.</li>
                         <li style="margin-bottom:15px;"><strong>DISPATCH:</strong> Loose or Gunny Bags (25KG).</li>
@@ -536,7 +565,7 @@
             </div>
             
             <footer style="margin-top:80px; text-align:center; font-size:0.9rem; opacity:0.6; border-top:1px solid #ccc; padding-top:20px;">
-                © 2026 Varman Metals. Zinc Ingot Manufacturer. | HSN: 7901
+                © 2026 Varman Metals. Zinc Ingot Supplier. | HSN: 7901 | Site By : Mr.Shiv Suri
             </footer>
         </div>
     </section>
